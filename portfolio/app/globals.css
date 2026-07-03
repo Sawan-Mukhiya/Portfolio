@@ -1,0 +1,419 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── Terracotta Bloom Palette ── */
+  --color-terracotta:      #C1440E;
+  --color-terracotta-light:#E8704A;
+  --color-terracotta-pale: #FAE5DC;
+  --color-dusty-rose:      #E8A598;
+  --color-dusty-rose-pale: #FBF0ED;
+  --color-sage:            #7A9E7E;
+  --color-sage-pale:       #EAF2EB;
+  --color-charcoal:        #2C2416;
+  --color-warm-brown:      #6B4E37;
+  --color-warm-beige:      #F5F0E6;
+  --color-cream:           #FDFAF5;
+  --color-warm-white:      #FFFCF8;
+  --color-warm-muted:      #9C8878;
+
+  /* ── Semantic aliases ── */
+  --color-primary:         var(--color-terracotta);
+  --color-primary-light:   var(--color-terracotta-light);
+  --color-primary-pale:    var(--color-terracotta-pale);
+  --color-secondary:       var(--color-dusty-rose);
+  --color-secondary-pale:  var(--color-dusty-rose-pale);
+  --color-accent:          var(--color-sage);
+  --color-accent-pale:     var(--color-sage-pale);
+  --color-background:      var(--color-warm-beige);
+  --color-surface:         var(--color-cream);
+  --color-surface-warm:    var(--color-warm-white);
+  --color-text:            var(--color-charcoal);
+  --color-text-muted:      var(--color-warm-muted);
+  --color-text-soft:       var(--color-warm-brown);
+
+  /* ── Typography ── */
+  --font-display:  var(--font-fraunces), Georgia, serif;
+  --font-heading:  var(--font-fraunces), Georgia, serif;
+  --font-body:     var(--font-dm-sans), system-ui, sans-serif;
+
+  /* ── Radius ── */
+  --radius-sm:   0.5rem;
+  --radius-md:   0.875rem;
+  --radius-lg:   1.25rem;
+  --radius-xl:   1.75rem;
+  --radius-2xl:  2.5rem;
+  --radius-full: 9999px;
+}
+
+/* ════════════════════════════════════
+   BASE
+════════════════════════════════════ */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, .font-display, .font-heading {
+  font-family: var(--font-display);
+}
+
+::selection {
+  background-color: var(--color-terracotta);
+  color: #ffffff;
+}
+
+/* ════════════════════════════════════
+   CARDS & SURFACES
+════════════════════════════════════ */
+.card-warm {
+  background: var(--color-cream);
+  border: 1.5px solid rgba(193, 68, 14, 0.08);
+  border-radius: var(--radius-xl);
+  box-shadow:
+    0 2px 8px rgba(193, 68, 14, 0.04),
+    0 8px 24px rgba(44, 36, 22, 0.06);
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.4s ease,
+              border-color 0.3s ease;
+}
+
+.card-warm:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow:
+    0 4px 16px rgba(193, 68, 14, 0.1),
+    0 16px 40px rgba(44, 36, 22, 0.1);
+  border-color: rgba(193, 68, 14, 0.2);
+}
+
+.card-terracotta {
+  background: linear-gradient(135deg, var(--color-terracotta-pale), #fff8f5);
+  border: 1.5px solid rgba(193, 68, 14, 0.15);
+  border-radius: var(--radius-xl);
+}
+
+.card-sage {
+  background: linear-gradient(135deg, var(--color-sage-pale), #f8fdf8);
+  border: 1.5px solid rgba(122, 158, 126, 0.2);
+  border-radius: var(--radius-xl);
+}
+
+.card-rose {
+  background: linear-gradient(135deg, var(--color-dusty-rose-pale), #fff8f7);
+  border: 1.5px solid rgba(232, 165, 152, 0.25);
+  border-radius: var(--radius-xl);
+}
+
+/* ════════════════════════════════════
+   BUTTONS
+════════════════════════════════════ */
+.btn-primary {
+  background: var(--color-terracotta);
+  color: white;
+  border-radius: var(--radius-full);
+  font-family: var(--font-body);
+  font-weight: 700;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.3s ease,
+              background 0.2s ease;
+  box-shadow: 0 4px 16px rgba(193, 68, 14, 0.3), 0 2px 4px rgba(193, 68, 14, 0.2);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(193, 68, 14, 0.4), 0 4px 8px rgba(193, 68, 14, 0.25);
+  background: var(--color-terracotta-light);
+}
+
+.btn-primary:active {
+  transform: scale(0.97);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--color-sage);
+  border: 2px solid var(--color-sage);
+  border-radius: var(--radius-full);
+  font-family: var(--font-body);
+  font-weight: 700;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.3s ease,
+              background 0.2s ease,
+              color 0.2s ease;
+}
+
+.btn-outline:hover {
+  background: var(--color-sage);
+  color: white;
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(122, 158, 126, 0.35);
+}
+
+/* ════════════════════════════════════
+   NAVBAR
+════════════════════════════════════ */
+.navbar-pill {
+  background: rgba(253, 250, 245, 0.85);
+  backdrop-filter: blur(20px);
+  border: 1.5px solid rgba(193, 68, 14, 0.1);
+  box-shadow:
+    0 4px 20px rgba(44, 36, 22, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+/* ════════════════════════════════════
+   GRADIENT BACKGROUNDS
+════════════════════════════════════ */
+.hero-bg {
+  background:
+    radial-gradient(ellipse 80% 60% at 20% 30%, rgba(232, 165, 152, 0.25) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 80% 70%, rgba(122, 158, 126, 0.18) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 40% at 60% 10%, rgba(193, 68, 14, 0.08) 0%, transparent 50%),
+    var(--color-warm-beige);
+}
+
+.section-cream {
+  background: var(--color-cream);
+  border-top: 1px solid rgba(193, 68, 14, 0.07);
+}
+
+/* Decorative squiggle underline */
+.underline-squiggle {
+  text-decoration: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='12'%3E%3Cpath d='M0 8 Q15 2 30 8 Q45 14 60 8 Q75 2 90 8 Q105 14 120 8' fill='none' stroke='%23C1440E' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+  background-size: 120px 12px;
+  padding-bottom: 10px;
+}
+
+/* ════════════════════════════════════
+   ANIMATIONS
+════════════════════════════════════ */
+@keyframes float {
+  0%   { transform: translateY(0px) rotate(0deg); }
+  33%  { transform: translateY(-18px) rotate(1.5deg); }
+  66%  { transform: translateY(-8px) rotate(-1deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes floatB {
+  0%   { transform: translateY(0px) rotate(0deg) scale(1); }
+  50%  { transform: translateY(-24px) rotate(-2deg) scale(1.03); }
+  100% { transform: translateY(0px) rotate(0deg) scale(1); }
+}
+
+@keyframes blobMorph {
+  0%   { border-radius: 60% 40% 55% 45% / 50% 60% 40% 50%; }
+  33%  { border-radius: 40% 60% 45% 55% / 60% 40% 55% 45%; }
+  66%  { border-radius: 55% 45% 60% 40% / 45% 55% 45% 55%; }
+  100% { border-radius: 60% 40% 55% 45% / 50% 60% 40% 50%; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInScale {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes sparkle {
+  0%   { opacity: 0; transform: scale(0) rotate(0deg); }
+  50%  { opacity: 1; transform: scale(1) rotate(180deg); }
+  100% { opacity: 0; transform: scale(0) rotate(360deg); }
+}
+
+@keyframes bounceIn {
+  0%   { transform: scale(0.3); opacity: 0; }
+  50%  { transform: scale(1.08); }
+  70%  { transform: scale(0.95); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes shimmer {
+  from { background-position: -200% center; }
+  to   { background-position: 200% center; }
+}
+
+@keyframes waveWiggle {
+  0%, 100% { transform: rotate(-2deg); }
+  50%       { transform: rotate(2deg); }
+}
+
+@keyframes cursorSparkle {
+  0%   { opacity: 0; transform: scale(0) rotate(0deg); }
+  40%  { opacity: 1; transform: scale(1) rotate(90deg); }
+  100% { opacity: 0; transform: scale(0) rotate(180deg) translateY(-12px); }
+}
+
+/* Utility classes */
+.animate-float        { animation: float 7s ease-in-out infinite; }
+.animate-float-b      { animation: floatB 9s ease-in-out infinite; animation-delay: 1.5s; }
+.animate-blob         { animation: blobMorph 10s ease-in-out infinite; }
+.animate-fade-up      { animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.animate-fade-left    { animation: fadeInLeft 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.animate-fade-right   { animation: fadeInRight 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.animate-fade-scale   { animation: fadeInScale 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.animate-spin-slow    { animation: spin-slow 12s linear infinite; }
+.animate-bounce-in    { animation: bounceIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
+.animate-wave         { animation: waveWiggle 2.5s ease-in-out infinite; }
+
+@keyframes sway {
+  0%   { transform: rotate(-3deg); }
+  50%  { transform: rotate(3deg); }
+  100% { transform: rotate(-3deg); }
+}
+
+.animate-sway {
+  animation: sway 3s ease-in-out infinite;
+  display: inline-block;
+}
+
+.shimmer-text {
+  background: linear-gradient(90deg,
+    var(--color-terracotta) 0%,
+    var(--color-terracotta-light) 30%,
+    #D4872A 50%,
+    var(--color-terracotta-light) 70%,
+    var(--color-terracotta) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+}
+
+/* Delay utilities */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-600 { animation-delay: 600ms; }
+.delay-700 { animation-delay: 700ms; }
+.delay-800 { animation-delay: 800ms; }
+
+/* Scroll-reveal states */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ════════════════════════════════════
+   TAGS & BADGES
+════════════════════════════════════ */
+.tag-terracotta {
+  background: var(--color-terracotta-pale);
+  color: var(--color-terracotta);
+  border: 1px solid rgba(193, 68, 14, 0.15);
+  border-radius: var(--radius-full);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.65rem;
+}
+
+.tag-sage {
+  background: var(--color-sage-pale);
+  color: var(--color-sage);
+  border: 1px solid rgba(122, 158, 126, 0.2);
+  border-radius: var(--radius-full);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.65rem;
+}
+
+.tag-rose {
+  background: var(--color-dusty-rose-pale);
+  color: #a0524a;
+  border: 1px solid rgba(232, 165, 152, 0.3);
+  border-radius: var(--radius-full);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.65rem;
+}
+
+/* ════════════════════════════════════
+   FORM ELEMENTS
+════════════════════════════════════ */
+.input-warm {
+  background: var(--color-warm-white);
+  border: 1.5px solid rgba(193, 68, 14, 0.12);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.input-warm::placeholder {
+  color: var(--color-text-muted);
+  opacity: 0.6;
+}
+
+.input-warm:focus {
+  outline: none;
+  border-color: var(--color-terracotta);
+  background: white;
+  box-shadow: 0 0 0 3px rgba(193, 68, 14, 0.1);
+}
+
+/* ════════════════════════════════════
+   CURSOR SPARKLE DOTS
+════════════════════════════════════ */
+.sparkle-dot {
+  position: fixed;
+  pointer-events: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  z-index: 9999;
+  animation: cursorSparkle 0.65s ease forwards;
+}
+
+/* ════════════════════════════════════
+   SCROLLBAR
+════════════════════════════════════ */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--color-warm-beige); }
+::-webkit-scrollbar-thumb { background: var(--color-terracotta-pale); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-terracotta-light); }

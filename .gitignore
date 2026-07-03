@@ -1,0 +1,73 @@
+# ─────────────────────────────────────────
+# ROOT-LEVEL IGNORES
+# ─────────────────────────────────────────
+
+# AI / IDE tool data (Gemini, Cursor, Copilot, etc.)
+.gemini/
+.cursor/
+.copilot/
+
+# Editor configs (keep if you want to share, otherwise ignore)
+.vscode/
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temp / scratch files
+*.tmp
+*.bak
+*.swp
+*.orig
+
+# Raw resume source texts — personal data, no need in repo
+resume_texts/
+
+
+# ─────────────────────────────────────────
+# NEXT.JS APP (portfolio/)
+# ─────────────────────────────────────────
+
+# Dependencies
+portfolio/node_modules/
+
+# Next.js build output
+portfolio/.next/
+portfolio/out/
+portfolio/build/
+
+# Env files — NEVER commit secrets
+portfolio/.env
+portfolio/.env.local
+portfolio/.env.development.local
+portfolio/.env.test.local
+portfolio/.env.production.local
+
+# TypeScript build info
+portfolio/*.tsbuildinfo
+portfolio/next-env.d.ts
+
+# Debug logs
+portfolio/npm-debug.log*
+portfolio/yarn-debug.log*
+portfolio/yarn-error.log*
+portfolio/.pnpm-debug.log*
+
+# Vercel deployment config
+portfolio/.vercel
+
+# Yarn v2+
+portfolio/.pnp
+portfolio/.pnp.*
+portfolio/.yarn/*
+!portfolio/.yarn/patches
+!portfolio/.yarn/plugins
+!portfolio/.yarn/releases
+!portfolio/.yarn/versions
+
+# Coverage reports
+portfolio/coverage/
+
+*.md
+!portfolio/README.md
