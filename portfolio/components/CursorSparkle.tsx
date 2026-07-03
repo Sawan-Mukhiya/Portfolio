@@ -15,7 +15,6 @@ export default function CursorSparkle() {
   useEffect(() => {
     let lastX = 0;
     let lastY = 0;
-    let frameId: number;
     let lastTime = 0;
     const THROTTLE_MS = 60; // spawn max ~16 dots/sec
 
@@ -60,7 +59,6 @@ export default function CursorSparkle() {
     window.addEventListener('mousemove', onMouseMove);
     return () => {
       window.removeEventListener('mousemove', onMouseMove);
-      cancelAnimationFrame(frameId);
     };
   }, []);
 
