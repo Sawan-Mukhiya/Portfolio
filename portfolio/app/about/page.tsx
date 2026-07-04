@@ -105,13 +105,13 @@ export default function About() {
               </h3>
               <div className="space-y-2 text-sm" style={{ fontFamily: 'var(--font-body)' }}>
                 <p style={{ color: 'var(--color-text-soft)' }}>
-                  📍 Chagal, Kathmandu, Nepal
+                  📍 {content.meta.location}
                 </p>
                 <p style={{ color: 'var(--color-text-soft)' }}>
-                  📧 sawanmukhiy@gmail.com
+                  📧 <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${content.meta.email}`} target="_blank" rel="noopener noreferrer" className="hover:underline transition-colors">{content.meta.email}</a>
                 </p>
                 <p style={{ color: 'var(--color-text-soft)' }}>
-                  📞 +977-9808283220
+                  📞 {content.meta.phone}
                 </p>
                 <a
                   href="https://github.com/Sawan-Mukhiya"

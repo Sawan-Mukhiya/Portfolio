@@ -83,7 +83,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-[10px] font-black uppercase tracking-widest mb-0.5" style={{ color: 'var(--color-text-muted)' }}>Email</p>
-                  <p className="font-bold text-sm" style={{ color: 'var(--color-charcoal)' }}>{content.meta.email}</p>
+                  <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${content.meta.email}`} target="_blank" rel="noopener noreferrer" className="font-bold text-sm block hover:underline" style={{ color: 'var(--color-charcoal)' }}>{content.meta.email}</a>
                 </div>
               </div>
             </div>
@@ -258,7 +258,7 @@ export default function Contact() {
 
               <p className="text-center text-xs mt-5" style={{ color: 'var(--color-text-muted)', fontFamily: 'var(--font-body)' }}>
                 Or email me directly at{' '}
-                <a href={`mailto:${content.meta.email}`} className="font-bold" style={{ color: 'var(--color-terracotta)' }}>{content.meta.email}</a>
+                <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${content.meta.email}`} target="_blank" rel="noopener noreferrer" className="font-bold" style={{ color: 'var(--color-terracotta)' }}>{content.meta.email}</a>
               </p>
 
               {isSubmitted && (

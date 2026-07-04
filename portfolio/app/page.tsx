@@ -328,11 +328,13 @@ export default function Home() {
           </p>
           <div className="flex flex-col gap-3 reveal delay-200">
             <a
-              href="mailto:sawanmukhiy@gmail.com"
+              href={`https://mail.google.com/mail/?view=cm&fs=1&to=${content.meta.email}`}
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-primary inline-flex items-center justify-center gap-2 px-8 py-4 text-base"
             >
               <span className="material-symbols-outlined text-lg">mail</span>
-              sawanmukhiy@gmail.com
+              {content.meta.email}
             </a>
             <a
               href="https://github.com/Sawan-Mukhiya"
