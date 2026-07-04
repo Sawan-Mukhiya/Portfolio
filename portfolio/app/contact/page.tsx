@@ -7,13 +7,39 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setTimeout(() => {
+    
+    const formData = new FormData(e.currentTarget);
+    const endpoint = process.env.NEXT_PUBLIC_FORMSPREE;
+
+    if (!endpoint) {
+      alert("Formspree endpoint is not configured. Please add NEXT_PUBLIC_FORMSPREE to your .env.local file.");
       setIsSubmitting(false);
-      setIsSubmitted(true);
-    }, 1200);
+      return;
+    }
+
+    try {
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(Object.fromEntries(formData)),
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+      } else {
+        alert("Oops! There was a problem submitting your form.");
+      }
+    } catch (error) {
+      alert("Oops! There was a problem submitting your form.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -141,6 +167,7 @@ export default function Contact() {
                     <input
                       className="input-warm w-full px-4 py-3 text-sm"
                       id="name"
+                      name="name"
                       placeholder="John Doe"
                       required
                       type="text"
@@ -157,6 +184,7 @@ export default function Contact() {
                     <input
                       className="input-warm w-full px-4 py-3 text-sm"
                       id="email"
+                      name="email"
                       placeholder="john@example.com"
                       required
                       type="email"
@@ -175,6 +203,7 @@ export default function Contact() {
                   <input
                     className="input-warm w-full px-4 py-3 text-sm"
                     id="subject"
+                    name="_subject"
                     placeholder="How can I help you?"
                     type="text"
                   />
@@ -191,6 +220,7 @@ export default function Contact() {
                   <textarea
                     className="input-warm w-full px-4 py-3 text-sm resize-none"
                     id="message"
+                    name="message"
                     placeholder="Tell me about your project..."
                     required
                     rows={5}
