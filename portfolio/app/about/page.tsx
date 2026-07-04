@@ -1,3 +1,5 @@
+import content from '../../content/portfolio.json';
+
 export default function About() {
   return (
     <main className="flex-grow pt-32 pb-24 relative" style={{ background: 'var(--color-warm-beige)' }}>
@@ -22,7 +24,7 @@ export default function About() {
             into Intelligence.
           </h1>
           <p className="text-lg max-w-xl mx-auto" style={{ color: 'var(--color-text-soft)', fontFamily: 'var(--font-body)' }}>
-            Aspiring AI Engineer · BCA Student · Based in Kathmandu, Nepal
+            {content.about.pageSubtitle}
           </p>
         </div>
 
@@ -64,29 +66,29 @@ export default function About() {
               <div className="space-y-4" style={{ fontFamily: 'var(--font-body)' }}>
                 <div>
                   <p className="font-bold text-sm" style={{ color: 'var(--color-terracotta)' }}>
-                    Bachelor in Computer Application (BCA)
+                    {content.about.education[0].degree}
                   </p>
                   <p className="text-xs mt-0.5" style={{ color: 'var(--color-charcoal)' }}>
-                    National College of Computer Studies
+                    {content.about.education[0].institution}
                   </p>
                   <p className="text-xs mt-0.5" style={{ color: 'var(--color-text-muted)' }}>
-                    Paknajol, Kathmandu · 2022 – Present
+                    {content.about.education[0].location} · {content.about.education[0].period}
                   </p>
                 </div>
                 <div className="pt-3" style={{ borderTop: '1px solid rgba(193,68,14,0.1)' }}>
                   <p className="font-bold text-sm" style={{ color: 'var(--color-warm-brown)' }}>
-                    +2 in Management (Computer Science)
+                    {content.about.education[1].degree}
                   </p>
                   <p className="text-xs mt-0.5" style={{ color: 'var(--color-charcoal)' }}>
-                    Bijeswori Secondary School
+                    {content.about.education[1].institution}
                   </p>
                   <p className="text-xs mt-0.5" style={{ color: 'var(--color-text-muted)' }}>
-                    Bijeswori, Kathmandu · 2020 – 2022
+                    {content.about.education[1].location} · {content.about.education[1].period}
                   </p>
                 </div>
                 <div className="pt-3" style={{ borderTop: '1px solid rgba(193,68,14,0.1)' }}>
                   <p className="text-xs italic leading-relaxed" style={{ color: 'var(--color-text-soft)' }}>
-                    &ldquo;Constant learning is the only way to navigate the evolving digital landscape.&rdquo;
+                    &ldquo;{content.about.educationQuote}&rdquo;
                   </p>
                 </div>
               </div>
@@ -144,59 +146,15 @@ export default function About() {
                 className="space-y-5 leading-relaxed text-base"
                 style={{ color: 'var(--color-text-soft)', fontFamily: 'var(--font-body)' }}
               >
-                <p>
-                  I am <strong style={{ color: 'var(--color-charcoal)' }}>Sawan Mukhiya</strong>, a data-driven developer
-                  from Kathmandu with strong <strong style={{ color: 'var(--color-terracotta)' }}>Python and SQL</strong> skills.
-                  My experience spans across analyzing datasets, building predictive ML models, and developing robust automated 
-                  data extraction pipelines. I enjoy working at the intersection of data and intelligence — where clean 
-                  pipelines meet real-world impact.
-                </p>
-                <p>
-                  Currently pursuing my <strong style={{ color: 'var(--color-sage)' }}>Bachelor in Computer Application</strong> at
-                  National College of Computer Studies, I spend my time applying machine learning
-                  concepts through PyTorch and Scikit-learn. I also build automated web scrapers with Playwright, explore 
-                  agentic AI workflows, and construct full-stack applications with Django REST and React.
-                </p>
-                <p>
-                  Whether it&apos;s my OCR platform <strong style={{ color: 'var(--color-charcoal)' }}>SnipTxt</strong>, 
-                  predicting garment employee productivity with XGBoost, or structuring messy web data into clean JSON schemas, 
-                  my goal remains the same: writing code that makes complex problems feel effortless.
-                </p>
+                {content.about.bio.map((paragraph, idx) => (
+                  <p key={idx} dangerouslySetInnerHTML={{ __html: paragraph }} />
+                ))}
               </div>
             </div>
 
             {/* Interest cards grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 reveal delay-300">
-              {[
-                {
-                  icon: 'analytics',
-                  title: 'Data Analysis & ML',
-                  desc: 'Using Pandas, NumPy, and Scikit-learn to uncover patterns and build predictive models like XGBoost.',
-                  card: 'card-terracotta',
-                  iconBg: 'var(--color-terracotta)',
-                },
-                {
-                  icon: 'document_scanner',
-                  title: 'OCR & AI Apps',
-                  desc: 'Built a production-grade OCR system using CNN + BiLSTM + CTC with Django REST and React frontend.',
-                  card: 'card-rose',
-                  iconBg: '#a0524a',
-                },
-                {
-                  icon: 'data_exploration',
-                  title: 'Scraping & Pipelines',
-                  desc: 'Developing robust web scrapers with Playwright to extract, normalize, and pipeline data into JSON/CSV schemas.',
-                  card: 'card-sage',
-                  iconBg: 'var(--color-sage)',
-                },
-                {
-                  icon: 'code',
-                  title: 'Full Stack & APIs',
-                  desc: 'Building end-to-end apps, financial tech, and robust APIs with Django REST Framework and React.js.',
-                  card: 'card-terracotta',
-                  iconBg: 'var(--color-terracotta-light)',
-                },
-              ].map((item) => (
+              {content.about.interestCards.map((item) => (
                 <div
                   key={item.title}
                   className={`${item.card} p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg`}
@@ -235,13 +193,10 @@ export default function About() {
                 className="text-2xl lg:text-3xl font-black text-white leading-tight"
                 style={{ fontFamily: 'var(--font-display)' }}
               >
-                &ldquo;Building intelligent systems that{' '}
-                <span style={{ color: 'var(--color-dusty-rose)' }}>make data speak</span> — from raw numbers to real decisions.&rdquo;
+                &ldquo;{content.about.philosophyQuote}&rdquo;
               </blockquote>
               <p className="mt-6 text-sm leading-relaxed max-w-lg mx-auto text-white/70" style={{ fontFamily: 'var(--font-body)' }}>
-                I believe the best AI isn&apos;t the most complex — it&apos;s the most useful.
-                Every project I build is a step toward software that genuinely helps people understand
-                and act on information around them.
+                {content.about.philosophyBody}
               </p>
             </div>
           </div>

@@ -1,0 +1,483 @@
+{
+  "meta": {
+    "name": "Sawan Mukhiya",
+    "title": "Aspiring AI Engineer",
+    "location": "Chagal, Kathmandu, Nepal",
+    "email": "sawanmukhiy@gmail.com",
+    "phone": "+977-9808283220",
+    "github": "https://github.com/Sawan-Mukhiya",
+    "linkedin": "https://linkedin.com/in/sawan-mukhiya",
+    "resumePdf": "/assets/resume.pdf"
+  },
+
+  "home": {
+    "statusChip": "Open to opportunities",
+    "heroDescription": "A <strong style=\"color: var(--color-terracotta)\">data-driven developer</strong> from Kathmandu with strong <strong style=\"color: var(--color-sage)\">Python, SQL & ML</strong> skills — turning raw data into meaningful, intelligent solutions.",
+    "ctaHeading": "Got a project or idea?",
+    "ctaSubheading": "Let's build it together.",
+    "ctaLocation": "Based in Kathmandu, Nepal",
+    "featuredSectionHeading": "Building data-driven systems",
+    "featuredSectionSubheading": "one commit at a time.",
+    "stats": [
+      { "val": "7", "label": "Projects" },
+      { "val": "BCA", "label": "Student" },
+      { "val": "AI/ML", "label": "Focused" }
+    ],
+    "featureCards": [
+      {
+        "icon": "analytics",
+        "title": "Data & ML",
+        "desc": "Applying Python, Pandas, and PyTorch to analyze datasets and build machine learning models that generate real insight.",
+        "cardClass": "card-terracotta",
+        "iconBg": "var(--color-terracotta)",
+        "delay": "delay-100"
+      },
+      {
+        "icon": "document_scanner",
+        "title": "AI Applications",
+        "desc": "Building intelligent systems like OCR pipelines using CNN + BiLSTM + CTC — turning research into working software.",
+        "cardClass": "card-sage",
+        "iconBg": "var(--color-sage)",
+        "delay": "delay-200"
+      },
+      {
+        "icon": "code_blocks",
+        "title": "Full Stack Dev",
+        "desc": "From Django REST APIs to React frontends and MySQL databases — complete, production-ready web applications.",
+        "cardClass": "card-rose",
+        "iconBg": "#a0524a",
+        "delay": "delay-300"
+      }
+    ],
+    "mobileAbout": {
+      "heading": "Who is Sawan?",
+      "body": "I'm a data-driven developer from Kathmandu pursuing my BCA at National College of Computer Studies. I build end-to-end solutions: from automated web scrapers and ML regression models to full-stack web apps and OCR systems — all backed by Python, Django, and React."
+    },
+    "mobileFeaturedProjects": [
+      {
+        "title": "SnipTxt: OCR Platform",
+        "desc": "Web OCR system using CNN + BiLSTM + CTC for text recognition. Built with Django REST, React.js, and MySQL.",
+        "tags": ["PyTorch", "Django", "React"],
+        "badge": "AI / ML",
+        "link": "https://github.com/Sawan-Mukhiya/SnipTxt-An-OCR-Platform-using-CRNN-with-CTC.git",
+        "cardClass": "card-terracotta"
+      },
+      {
+        "title": "NEPSE Stock Journal",
+        "desc": "Stock journal with tax/fee calculations, portfolio analytics, and financial reporting for Nepal's stock exchange.",
+        "tags": ["Django", "React", "MySQL"],
+        "badge": "Full Stack",
+        "link": "https://github.com/Sawan-Mukhiya/NEPSE_Stock_journal_and_Taxes.git",
+        "cardClass": "card-sage"
+      },
+      {
+        "title": "Productivity Prediction",
+        "desc": "Garment employee productivity prediction with EDA and XGBoost regression, achieving R² ≈ 0.94.",
+        "tags": ["Pandas", "Scikit-learn", "XGBoost"],
+        "badge": "Data Science",
+        "link": "https://github.com/Sawan-Mukhiya/Garment-Employee-Productivity-Prediction.git",
+        "cardClass": "card-rose"
+      }
+    ],
+    "mobileContact": {
+      "heading": "Let's work together",
+      "body": "Open to internships, collaborations, and freelance projects. Drop me a message and I'll get back within 24 hours."
+    }
+  },
+
+  "about": {
+    "pageSubtitle": "Aspiring AI Engineer · BCA Student · Based in Kathmandu, Nepal",
+    "educationQuote": "Constant learning is the only way to navigate the evolving digital landscape.",
+    "bio": [
+      "I am <strong style=\"color: var(--color-charcoal)\">Sawan Mukhiya</strong>, a data-driven developer from Kathmandu with strong <strong style=\"color: var(--color-terracotta)\">Python and SQL</strong> skills. My experience spans across analyzing datasets, building predictive ML models, and developing robust automated data extraction pipelines. I enjoy working at the intersection of data and intelligence — where clean pipelines meet real-world impact.",
+      "Currently pursuing my <strong style=\"color: var(--color-sage)\">Bachelor in Computer Application</strong> at National College of Computer Studies, I spend my time applying machine learning concepts through PyTorch and Scikit-learn. I also build automated web scrapers with Playwright, explore agentic AI workflows, and construct full-stack applications with Django REST and React.",
+      "Whether it's my OCR platform <strong style=\"color: var(--color-charcoal)\">SnipTxt</strong>, predicting garment employee productivity with XGBoost, or structuring messy web data into clean JSON schemas, my goal remains the same: writing code that makes complex problems feel effortless."
+    ],
+    "philosophyQuote": "Building intelligent systems that make data speak — from raw numbers to real decisions.",
+    "philosophyBody": "I believe the best AI isn't the most complex — it's the most useful. Every project I build is a step toward software that genuinely helps people understand and act on information around them.",
+    "interestCards": [
+      {
+        "icon": "analytics",
+        "title": "Data Analysis & ML",
+        "desc": "Using Pandas, NumPy, and Scikit-learn to uncover patterns and build predictive models like XGBoost.",
+        "card": "card-terracotta",
+        "iconBg": "var(--color-terracotta)"
+      },
+      {
+        "icon": "document_scanner",
+        "title": "OCR & AI Apps",
+        "desc": "Built a production-grade OCR system using CNN + BiLSTM + CTC with Django REST and React frontend.",
+        "card": "card-rose",
+        "iconBg": "#a0524a"
+      },
+      {
+        "icon": "data_exploration",
+        "title": "Scraping & Pipelines",
+        "desc": "Developing robust web scrapers with Playwright to extract, normalize, and pipeline data into JSON/CSV schemas.",
+        "card": "card-sage",
+        "iconBg": "var(--color-sage)"
+      },
+      {
+        "icon": "code",
+        "title": "Full Stack & APIs",
+        "desc": "Building end-to-end apps, financial tech, and robust APIs with Django REST Framework and React.js.",
+        "card": "card-terracotta",
+        "iconBg": "var(--color-terracotta-light)"
+      }
+    ],
+    "education": [
+      {
+        "degree": "Bachelor in Computer Application (BCA)",
+        "institution": "National College of Computer Studies",
+        "location": "Paknajol, Kathmandu",
+        "period": "2022 – Present"
+      },
+      {
+        "degree": "+2 in Management (Computer Science)",
+        "institution": "Bijeswori Secondary School",
+        "location": "Bijeswori, Kathmandu",
+        "period": "2020 – 2022"
+      }
+    ]
+  },
+
+  "resume": {
+    "pageSubtitle": "Data-driven developer skilled in Python, SQL, and ML — building intelligent tools from Kathmandu.",
+    "careerGoal": "My goal is to become an AI/ML engineer who builds data-driven systems that make a real difference. I am motivated to integrate data from multiple sources, apply machine learning concepts, and create actionable insights — contributing to collaborative teams and real-world problems that matter.",
+    "technicalSkills": [
+      {
+        "category": "Languages",
+        "skills": ["Python", "SQL", "Java", "JavaScript", "PHP", "C"],
+        "tagStyle": "tag-terracotta"
+      },
+      {
+        "category": "Data Analysis & ML",
+        "skills": ["Pandas", "NumPy", "Matplotlib", "Seaborn", "Scikit-learn", "PyTorch"],
+        "tagStyle": "tag-sage"
+      },
+      {
+        "category": "Web Scraping & Automation",
+        "skills": ["Playwright", "Scrapy", "BeautifulSoup", "Requests"],
+        "tagStyle": "tag-rose"
+      },
+      {
+        "category": "Frameworks & Backend",
+        "skills": ["Django REST", "FastAPI", "React.js", "Celery", "WebSockets"],
+        "tagStyle": "tag-terracotta"
+      },
+      {
+        "category": "Databases & Tools",
+        "skills": ["MySQL", "SQLite", "MongoDB", "Git", "Docker", "Postman"],
+        "tagStyle": "tag-sage"
+      },
+      {
+        "category": "Other",
+        "skills": ["Agentic AI", "NLP", "Computer Vision", "Agile", "QA"],
+        "tagStyle": "tag-rose"
+      }
+    ],
+    "spokenLanguages": [
+      { "lang": "Nepali", "level": "Native", "tagStyle": "tag-terracotta" },
+      { "lang": "English", "level": "Proficient", "tagStyle": "tag-sage" },
+      { "lang": "Hindi", "level": "Fluent", "tagStyle": "tag-rose" }
+    ],
+    "experience": [
+      {
+        "role": "BCA Student & Independent Developer",
+        "company": "National College of Computer Studies",
+        "period": "2022 — Present",
+        "isActive": true,
+        "description": [
+          "Pursuing Bachelor in Computer Application with a focus on AI, data science, and software engineering.",
+          "Built 7 independent projects spanning OCR, fintech, web scraping, ML models, and game development.",
+          "Developed automated web-scraping pipelines to extract and normalize data into structured JSON/CSV schemas.",
+          "Continuously applying ML/AI concepts through PyTorch and Scikit-learn, with emphasis on computer vision and NLP."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Bachelor in Computer Application (BCA)",
+        "institution": "National College of Computer Studies, Paknajol, Kathmandu",
+        "period": "2022 – Present",
+        "status": "In Progress",
+        "tagStyle": "tag-sage"
+      },
+      {
+        "degree": "+2 in Management (Computer Science)",
+        "institution": "Bijeswori Secondary School, Bijeswori, Kathmandu",
+        "period": "2020 – 2022",
+        "status": "Completed",
+        "tagStyle": "tag-rose"
+      }
+    ],
+    "keyProjects": [
+      {
+        "title": "SnipTxt: OCR Platform",
+        "description": "Web OCR system using CNN + BiLSTM + CTC for text recognition with Django REST and React.js.",
+        "tags": ["PyTorch", "Django", "React"],
+        "tagStyle": "tag-terracotta",
+        "cardClass": "card-terracotta",
+        "link": "https://github.com/Sawan-Mukhiya/SnipTxt-An-OCR-Platform-using-CRNN-with-CTC.git"
+      },
+      {
+        "title": "NEPSE Stock Journal",
+        "description": "Stock journal with tax calculations, portfolio analytics, and financial reporting for Nepal's stock exchange.",
+        "tags": ["Django", "React", "MySQL"],
+        "tagStyle": "tag-sage",
+        "cardClass": "card-sage",
+        "link": "https://github.com/Sawan-Mukhiya/NEPSE_Stock_journal_and_Taxes.git"
+      },
+      {
+        "title": "Web-Scraping Pipeline",
+        "description": "Automated scraper using Playwright to extract daily entertainment articles and media into structured JSON.",
+        "tags": ["Python", "Playwright", "UV"],
+        "tagStyle": "tag-rose",
+        "cardClass": "card-rose",
+        "link": "https://github.com/Sawan-Mukhiya/Web-Scraping.git"
+      },
+      {
+        "title": "Productivity Prediction",
+        "description": "Performed EDA and built regression models (XGBoost) for garment worker data, achieving R² ≈ 0.94.",
+        "tags": ["Pandas", "Scikit-learn"],
+        "tagStyle": "tag-terracotta",
+        "cardClass": "card-terracotta",
+        "link": "https://github.com/Sawan-Mukhiya/Garment-Employee-Productivity-Prediction.git"
+      }
+    ]
+  },
+
+  "projects": [
+    {
+      "title": "SnipTxt: OCR Platform",
+      "badge": "AI / ML",
+      "badgeBg": "var(--color-terracotta)",
+      "accentColor": "var(--color-terracotta)",
+      "category": "AI / Machine Learning · Full Stack Web",
+      "description": "A web OCR system built with CNN + BiLSTM + CTC for text recognition. Features modular REST APIs and a Django backend integrated with a MySQL database for storing extracted text.",
+      "longDescription": [
+        "SnipTxt is a full-stack Optical Character Recognition (OCR) platform that accepts an image and outputs recognized text with high accuracy. The system is powered by a custom deep learning model that combines Convolutional Neural Networks (CNN), Bidirectional Long Short-Term Memory (BiLSTM) layers, and a Connectionist Temporal Classification (CTC) decoder — a state-of-the-art architecture for sequence-to-sequence text recognition tasks.",
+        "The backend is built on Django REST Framework, exposing modular APIs that handle image uploads, model inference, and text storage. A React.js frontend provides an intuitive interface for users to upload images and receive extracted text instantly. All recognized text is persisted to a MySQL database, enabling users to maintain a history of their OCR queries.",
+        "The model was trained using supervised learning on labeled text-image datasets, learning to map visual patterns of characters directly to their Unicode representations without requiring explicit character segmentation."
+      ],
+      "highlights": [
+        "Built CNN + BiLSTM + CTC deep learning model for end-to-end text recognition",
+        "Designed modular Django REST APIs for image upload and inference",
+        "Integrated React.js frontend with real-time OCR result display",
+        "Persisted results to MySQL with searchable extraction history",
+        "Implemented backend testing and robust error handling for production stability",
+        "Achieved high character recognition accuracy on diverse text image inputs"
+      ],
+      "tags": ["PyTorch", "Django REST", "React.js", "MySQL"],
+      "tagStyles": ["tag-terracotta", "tag-terracotta", "tag-sage", "tag-rose"],
+      "techDetails": [
+        { "label": "ML Model", "value": "CNN + BiLSTM + CTC" },
+        { "label": "Backend", "value": "Django REST Framework" },
+        { "label": "Frontend", "value": "React.js" },
+        { "label": "Database", "value": "MySQL" },
+        { "label": "ML Library", "value": "PyTorch" },
+        { "label": "Task", "value": "Optical Character Recognition" }
+      ],
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAR15ic-HBInin8W1wb8jc1D4XqSWjFrG8gFeRxnNaxpPGnFuEgOkA_dX6Z57PUUSpw6ARITNODClt-pIQ5-oE5qnVAGjsw5_e6mDp8D7oOSdwCKTsaQgx0LukMV1ul10HQnqZReQKA5V-xqtPJ5s4tUnTUBQTCF9zoDllKytbj7tug9-b-GwfWHFt6ivSJ2HfHbC1WMRHbQ4WeMm75XQVeC8W0kvriCZ45Hh4rn8Njtd0epfk8uLPsqX9mK-rpMj3C_ChCIzeyM070",
+      "link": "https://github.com/Sawan-Mukhiya/SnipTxt-An-OCR-Platform-using-CRNN-with-CTC.git"
+    },
+    {
+      "title": "NEPSE Stock Journal",
+      "badge": "Full Stack",
+      "badgeBg": "var(--color-sage)",
+      "accentColor": "var(--color-sage)",
+      "category": "Fintech · Full Stack Web",
+      "description": "A stock journal with tax/fee calculations and portfolio analytics for the Nepal Stock Exchange (NEPSE). Backend APIs handle financial reporting and data aggregation for investor insights.",
+      "longDescription": [
+        "The NEPSE Stock Journal is a data-driven web application designed specifically for Nepal Stock Exchange (NEPSE) investors. It allows users to record their stock trades and automatically computes the true cost of each transaction by factoring in all applicable taxes, broker fees, SEBON fees, and DP charges — giving a precise profit/loss figure that manual spreadsheets often miss.",
+        "The application is built with a Django REST Framework backend that handles all business logic for trade journalization, tax calculations, and portfolio analytics. A React.js frontend presents interactive charts and tables, enabling users to visualize their portfolio performance over time, drill into individual stock positions, and generate financial insights.",
+        "All trade data is stored in a MySQL database, with carefully designed schemas to support both individual trade queries and aggregated portfolio reporting. The system also supports saving and retrieving historical trade data, making it a complete investment tracking solution for the Nepali market."
+      ],
+      "highlights": [
+        "Implemented NEPSE-specific tax/fee calculation engine (broker, SEBON, DP charges)",
+        "Built RESTful APIs for trade journalization and portfolio analytics",
+        "Developed interactive chart visualizations for portfolio performance tracking",
+        "Designed MySQL schemas for both granular trade data and aggregated reporting",
+        "Enabled profit/loss analysis across individual stocks and entire portfolio",
+        "Implemented data validation and testing scripts to ensure financial accuracy"
+      ],
+      "tags": ["Django REST", "React.js", "MySQL"],
+      "tagStyles": ["tag-terracotta", "tag-sage", "tag-rose"],
+      "techDetails": [
+        { "label": "Backend", "value": "Django REST Framework" },
+        { "label": "Frontend", "value": "React.js" },
+        { "label": "Database", "value": "MySQL" },
+        { "label": "Domain", "value": "Nepal Stock Exchange (NEPSE)" },
+        { "label": "Features", "value": "Tax Calc, Portfolio Analytics" },
+        { "label": "Visualization", "value": "Interactive Charts" }
+      ],
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDYfGt61HvYpgYQI6FRFQdl2x89njQ8fe2n_X706RYr_x1mjLBbl0ee5RRnxxMyPPQhrBBSWX5h9puHjXRNfegdyH77uzZ5rAbe4gCu0jbcNWIVOLYq3Dbc0kFYVmOwpHXpN0EAudjym4LB4RCvjQg3C_jiego0VO9vJzmlbqdMmzRhQigXDB64ExKUXRbqd3H1rYlkKZ7U42gLYeZyK0C5RGTHkEurIGGIHClwh5RTTRH9J2RO0b3z7yheNZDzGrwT6BOCAahQ3BWr",
+      "link": "https://github.com/Sawan-Mukhiya/NEPSE_Stock_journal_and_Taxes.git"
+    },
+    {
+      "title": "ExEC: Expression Tool",
+      "badge": "Web App",
+      "badgeBg": "#a0524a",
+      "accentColor": "#a0524a",
+      "category": "Web Application · Academic",
+      "description": "A web app for evaluating and converting mathematical expressions. Uses MySQL to store and query expression data and conversion results, with a clean PHP backend.",
+      "longDescription": [
+        "ExEC (Expression Evaluation & Conversion Tool) is a web application that provides a comprehensive environment for working with mathematical expressions in multiple notations. Users can input expressions in infix, prefix, or postfix notation, and the system evaluates them and converts between notations seamlessly.",
+        "The application is built with a PHP backend that handles the parsing, evaluation, and conversion logic using stack-based algorithms — the same algorithms studied in Data Structures & Algorithms coursework. A MySQL database stores expression inputs and their evaluated results, enabling users to maintain an expression history and look up previous calculations.",
+        "The frontend provides a clean, intuitive interface where users can select their input notation, enter an expression, and instantly see evaluation results alongside notation conversions. The tool is particularly useful for computer science students learning about expression trees and notation systems."
+      ],
+      "highlights": [
+        "Implemented infix-to-prefix, infix-to-postfix, and postfix-to-infix conversion algorithms",
+        "Built expression evaluator using stack-based algorithms",
+        "Stored expression history and results in MySQL for query and retrieval",
+        "Designed clean PHP backend with modular logic for parsing and evaluation",
+        "Useful academic tool for understanding algorithmic expression handling",
+        "Supports multiple mathematical operators with correct precedence rules"
+      ],
+      "tags": ["PHP", "MySQL"],
+      "tagStyles": ["tag-terracotta", "tag-rose"],
+      "techDetails": [
+        { "label": "Backend", "value": "PHP" },
+        { "label": "Database", "value": "MySQL" },
+        { "label": "Core Algorithm", "value": "Stack-based expression parsing" },
+        { "label": "Input Notations", "value": "Infix, Prefix, Postfix" },
+        { "label": "Features", "value": "Evaluate + Convert expressions" },
+        { "label": "Domain", "value": "Data Structures & Algorithms" }
+      ],
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDnwAMP2RxDxY_a6eChssw14XumJvDDlHrvx3-PVWg9cuo-Z6N1FJqHS63kTKXRoY-pkA9GORJ7NnKu2Iw57hJYPibPkudbcY-a0ac1Tw1JCSoQGt5zbrUG_ECKYtGXD8UvuWXGj7zzu0SfenjoUdn9LrTcfCA5EW0fcs_LAXSu_Xi6iia9c02Y-ZNsLVA8HWFR8d1Z9RRZ44pfj2EIukXXxlNTCLJDbGtdpn899goSZI6rvQ7JqmG1MJ-GlgWVEJ_xIkv7O3IVCHZw",
+      "link": "https://github.com/Sawan-Mukhiya/ExEC-Expression_Evaluation_And_Conversion_Tool.git"
+    },
+    {
+      "title": "Chess Arena",
+      "badge": "Game Dev",
+      "badgeBg": "var(--color-dusty-rose)",
+      "accentColor": "var(--color-sage)",
+      "category": "Game Development · Desktop App",
+      "description": "An offline chess game built in Java with full undo, save/load, and draw features. MySQL is used to persist game states, moves, and user sessions across play sessions.",
+      "longDescription": [
+        "Chess Arena is a fully functional offline chess game implemented in Java, designed with a clean object-oriented architecture. The game supports all standard chess rules including castling, en passant, and pawn promotion, along with quality-of-life features that make it a complete chess experience.",
+        "The application uses MySQL as a persistent storage layer, enabling players to save their ongoing games and resume them at any time. The game state — including the board position, move history, and player information — is serialized and stored in structured database tables. The move history can be queried to replay games or analyze past decisions.",
+        "Key gameplay features include an undo system that allows players to revert any number of moves, a draw offer mechanism between two players, and the ability to save/load named game sessions. The game is built using Java Swing for the graphical interface, with a clear separation between the game logic (model), UI (view), and controller layers."
+      ],
+      "highlights": [
+        "Implemented full chess rule set: castling, en passant, pawn promotion, check/checkmate",
+        "Built undo system allowing move history traversal",
+        "Designed save/load system with MySQL-backed game state persistence",
+        "Used Java Swing for the interactive graphical chessboard interface",
+        "Stored move history, board states, and user sessions in relational database",
+        "Applied MVC architecture for clean separation of game logic and UI"
+      ],
+      "tags": ["Java", "MySQL"],
+      "tagStyles": ["tag-sage", "tag-rose"],
+      "techDetails": [
+        { "label": "Language", "value": "Java" },
+        { "label": "UI Framework", "value": "Java Swing" },
+        { "label": "Database", "value": "MySQL" },
+        { "label": "Architecture", "value": "MVC Pattern" },
+        { "label": "Features", "value": "Undo, Save/Load, Draw offer" },
+        { "label": "Rules", "value": "Full standard chess ruleset" }
+      ],
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuA5DFqQwce56sehifs7v_kWAb7dD2pTYBHJ3N2XT3_Pkxck4v7oOqm_zGp66PoK5rtoQGjnXgycLZnMS-WtjBRbgTrBW3ZrZky1tT_n6376YdCf3od9Q4O_ArExpSu7k1R5TocRneDntG6vPULmT9dOdyfmVfYC2aycmROWFieEnPdCwA0-0t0mtFpdbIVILgvbwxWOrMioeyb1R4hBeMhnxqqlTyI-uGsqrUqtMXWLrrOJqDsXP-EskKCQRKtwjw33fspTdQD2qCSM",
+      "link": "https://github.com/Sawan-Mukhiya/Chess-Arena-An-Offline-Chess-Game.git"
+    },
+    {
+      "title": "Web-Scraping Pipeline",
+      "badge": "Automation",
+      "badgeBg": "#a0524a",
+      "accentColor": "#a0524a",
+      "category": "Web Scraping · Data Pipeline",
+      "description": "Automated scraper using Playwright to extract daily entertainment articles and media. Features robust error handling, automated navigation, and extraction into structured JSON.",
+      "longDescription": [
+        "The Web-Scraping Pipeline is a production-grade automated data extraction system built in Python using Playwright for browser automation. The primary target is ekantipur.com, one of Nepal's leading news portals, from which the scraper extracts the top 5 daily entertainment articles and the cartoon of the day.",
+        "The scraper uses the UV package manager for dependency isolation and reproducible environments. Playwright handles headless browser automation, navigating JavaScript-heavy pages that traditional HTTP-based scrapers cannot handle. The system implements robust error handling and validation checks at each extraction step to ensure data accuracy even when the target website's structure changes.",
+        "Extracted data — including article titles, URLs, summaries, images, and publication timestamps — is parsed, normalized, and saved into structured JSON files. The pipeline is designed to be run on a schedule, making it suitable for building datasets, monitoring content, or feeding downstream data applications."
+      ],
+      "highlights": [
+        "Used Playwright for JavaScript-heavy page scraping with headless browser automation",
+        "Extracted top 5 entertainment articles + daily cartoon from ekantipur.com",
+        "Implemented multi-layer error handling and validation for scraping resilience",
+        "Engineered automated navigation logic for dynamic page structures",
+        "Normalized extracted data into structured JSON schemas for downstream use",
+        "Used UV for dependency management and reproducible environments"
+      ],
+      "tags": ["Python", "Playwright", "UV"],
+      "tagStyles": ["tag-terracotta", "tag-sage", "tag-rose"],
+      "techDetails": [
+        { "label": "Language", "value": "Python" },
+        { "label": "Browser Automation", "value": "Playwright" },
+        { "label": "Package Manager", "value": "UV" },
+        { "label": "Target", "value": "ekantipur.com" },
+        { "label": "Output Format", "value": "Structured JSON" },
+        { "label": "Data", "value": "Articles, Media, Timestamps" }
+      ],
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBeB2I6yx0B25CPnH_LZnbCU3KR8dFloWUc4fxZDaYoBq9bNH4zHqnFyBNTwJWcvDyqOgUWVfU8D_Z9fViMYwYN5MIKqq_B6tUwRz0UWyuR2m2pyOp8o_nN_jBi_v-oSUP2RBdF7lGaYNNNrWygJe-YyqVjx0JCB-04sPvB_JpQA1QDGSbVizz_skwIZ3DEd0OXmfF44DFTPgtIHjqyWe2NjnvNXKNtcqFCZ561-68zqR9tPcAqoAeDZ5FwGCH2DFY4VeQG4EEGslWK",
+      "link": "https://github.com/Sawan-Mukhiya/Web-Scraping.git"
+    },
+    {
+      "title": "Productivity Prediction",
+      "badge": "Data Science",
+      "badgeBg": "var(--color-terracotta)",
+      "accentColor": "var(--color-terracotta)",
+      "category": "Data Science · Machine Learning",
+      "description": "Garment employee productivity prediction model. Performed extensive EDA and built regression models using XGBoost, achieving high predictive accuracy (R² ≈ 0.94).",
+      "longDescription": [
+        "This data science project focuses on predicting the productivity of garment factory employees using machine learning regression techniques. The dataset contains features such as team size, targeted productivity, overtime, incentive pay, idle time, and department — all factors that influence worker output in a manufacturing environment.",
+        "The project begins with an extensive Exploratory Data Analysis (EDA) phase, using Pandas, Matplotlib, and Seaborn to visualize productivity patterns, understand feature distributions, identify correlations, and detect outliers. Insights from EDA directly informed the feature engineering decisions.",
+        "Multiple regression models were trained and evaluated using Scikit-learn, including Linear Regression, Random Forest, and Gradient Boosted Trees. The final XGBoost model achieved an R² score of approximately 0.94, meaning the model explains 94% of the variance in employee productivity — a highly accurate result for this domain."
+      ],
+      "highlights": [
+        "Performed comprehensive EDA to understand productivity patterns and feature relationships",
+        "Applied feature engineering based on domain knowledge of garment manufacturing",
+        "Trained and compared multiple regression models: Linear Regression, Random Forest, XGBoost",
+        "Achieved R² ≈ 0.94 with final XGBoost model — explaining 94% of productivity variance",
+        "Used Seaborn and Matplotlib for rich visualization of data distributions and model results",
+        "Delivered a complete end-to-end data science workflow: EDA → preprocessing → modeling → evaluation"
+      ],
+      "tags": ["Pandas", "Scikit-learn", "XGBoost"],
+      "tagStyles": ["tag-terracotta", "tag-sage", "tag-rose"],
+      "techDetails": [
+        { "label": "Language", "value": "Python" },
+        { "label": "Data Analysis", "value": "Pandas, NumPy" },
+        { "label": "Visualization", "value": "Matplotlib, Seaborn" },
+        { "label": "ML Framework", "value": "Scikit-learn, XGBoost" },
+        { "label": "Task", "value": "Regression (Productivity Prediction)" },
+        { "label": "Best R² Score", "value": "≈ 0.94 (XGBoost)" }
+      ],
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCrB1DJMHWAwy0rfxVYE7qNBHYkm32cO3kDK1kL1R_MHXYnYSmnuklD0Jdg9hiQNzLno_OdyfmVfYC2aycmROWFieEnPdCwA0-0t0mtFpdbIVILgvbwxWOrMioeyb1R4hBeMhnxqqlTyI-uGsqrUqtMXWLrrOJqDsXP-EskKCQRKtwjw33fspTdQD2qCSM",
+      "link": "https://github.com/Sawan-Mukhiya/Garment-Employee-Productivity-Prediction.git"
+    },
+    {
+      "title": "Hands On Machine Learning",
+      "badge": "AI / ML",
+      "badgeBg": "var(--color-sage)",
+      "accentColor": "var(--color-sage)",
+      "category": "Machine Learning · Study Project",
+      "description": "Implementation of various machine learning algorithms and concepts using Python and Scikit-learn, emphasizing supervised learning, evaluation metrics, and practical applications.",
+      "longDescription": [
+        "Hands On Machine Learning is a comprehensive study project that systematically implements and explores core machine learning algorithms using Python's scientific stack. Inspired by hands-on learning philosophy, the project serves as both a study companion and a practical reference for ML concepts.",
+        "The project covers a wide spectrum of supervised learning algorithms — including Linear Regression, Logistic Regression, Decision Trees, Random Forests, Support Vector Machines (SVM), K-Nearest Neighbors (KNN), and Neural Network basics. Each algorithm is implemented, trained, and evaluated on relevant datasets with thorough documentation of observations.",
+        "Key concepts explored include model evaluation metrics (accuracy, precision, recall, F1, ROC-AUC), cross-validation strategies, hyperparameter tuning with GridSearchCV, feature scaling and preprocessing pipelines, and overfitting/underfitting diagnostics. All implementations use Scikit-learn with NumPy and Pandas for data handling, and Matplotlib/Seaborn for visualizations."
+      ],
+      "highlights": [
+        "Implemented 7+ supervised learning algorithms from scratch and with Scikit-learn",
+        "Explored model evaluation metrics: accuracy, precision, recall, F1-score, ROC-AUC",
+        "Applied cross-validation and GridSearchCV for robust model selection",
+        "Built feature preprocessing pipelines for handling missing values and scaling",
+        "Investigated ensemble methods: Random Forest, Gradient Boosting, AdaBoost",
+        "Documented observations and findings in Jupyter Notebooks for reproducibility"
+      ],
+      "tags": ["Scikit-learn", "Python", "ML"],
+      "tagStyles": ["tag-sage", "tag-terracotta", "tag-rose"],
+      "techDetails": [
+        { "label": "Language", "value": "Python" },
+        { "label": "ML Library", "value": "Scikit-learn" },
+        { "label": "Data", "value": "Pandas, NumPy" },
+        { "label": "Visualization", "value": "Matplotlib, Seaborn" },
+        { "label": "Environment", "value": "Jupyter Notebook" },
+        { "label": "Focus", "value": "Supervised Learning, Model Evaluation" }
+      ],
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAR15ic-HBInin8W1wb8jc1D4XqSWjFrG8gFeRxnNaxpPGnFuEgOkA_dX6Z57PUUSpw6ARITNODClt-pIQ5-oE5qnVAGjsw5_e6mDp8D7oOSdwCKTsaQgx0LukMV1ul10HQnqZReQKA5V-xqtPJ5s4tUnTUBQTCF9zoDllKytbj7tug9-b-GwfWHFt6ivSJ2HfHbC1WMRHbQ4WeMm75XQVeC8W0kvriCZ45Hh4rn8Njtd0epfk8uLPsqX9mK-rpMj3C_ChCIzeyM070",
+      "link": "https://github.com/Sawan-Mukhiya/Hands-On-Machine-Learning.git"
+    }
+  ]
+}

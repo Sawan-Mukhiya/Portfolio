@@ -1,87 +1,6 @@
+import content from '../../content/portfolio.json';
+
 export default function Resume() {
-  const technicalExpertise = [
-    {
-      category: "Languages",
-      skills: ["Python", "SQL", "Java", "JavaScript", "PHP", "C"],
-      tagStyle: "tag-terracotta",
-    },
-    {
-      category: "Data Analysis & ML",
-      skills: ["Pandas", "NumPy", "Matplotlib", "Seaborn", "Scikit-learn", "PyTorch"],
-      tagStyle: "tag-sage",
-    },
-    {
-      category: "Web Scraping & Automation",
-      skills: ["Playwright", "Scrapy", "BeautifulSoup", "Requests"],
-      tagStyle: "tag-rose",
-    },
-    {
-      category: "Frameworks & Backend",
-      skills: ["Django REST", "FastAPI", "React.js", "Celery", "WebSockets"],
-      tagStyle: "tag-terracotta",
-    },
-    {
-      category: "Databases & Tools",
-      skills: ["MySQL", "SQLite", "MongoDB", "Git", "Docker", "Postman"],
-      tagStyle: "tag-sage",
-    },
-    {
-      category: "Other",
-      skills: ["Agentic AI", "NLP", "Computer Vision", "Agile", "QA"],
-      tagStyle: "tag-rose",
-    },
-  ];
-
-  const experience = [
-    {
-      role: "BCA Student & Independent Developer",
-      company: "National College of Computer Studies",
-      period: "2022 — Present",
-      isActive: true,
-      description: [
-        "Pursuing Bachelor in Computer Application with a focus on AI, data science, and software engineering.",
-        "Built 7 independent projects spanning OCR, fintech, web scraping, ML models, and game development.",
-        "Developed automated web-scraping pipelines to extract and normalize data into structured JSON/CSV schemas.",
-        "Continuously applying ML/AI concepts through PyTorch and Scikit-learn, with emphasis on computer vision and NLP.",
-      ],
-    },
-  ];
-
-  const keyProjects = [
-    {
-      title: "SnipTxt: OCR Platform",
-      description: "Web OCR system using CNN + BiLSTM + CTC for text recognition with Django REST and React.js.",
-      tags: ["PyTorch", "Django", "React"],
-      tagStyle: "tag-terracotta",
-      cardClass: "card-terracotta",
-      link: "https://github.com/Sawan-Mukhiya/SnipTxt-An-OCR-Platform-using-CRNN-with-CTC.git",
-    },
-    {
-      title: "NEPSE Stock Journal",
-      description: "Stock journal with tax calculations, portfolio analytics, and financial reporting for Nepal's stock exchange.",
-      tags: ["Django", "React", "MySQL"],
-      tagStyle: "tag-sage",
-      cardClass: "card-sage",
-      link: "https://github.com/Sawan-Mukhiya/NEPSE_Stock_journal_and_Taxes.git",
-    },
-    {
-      title: "Web-Scraping Pipeline",
-      description: "Automated scraper using Playwright to extract daily entertainment articles and media into structured JSON.",
-      tags: ["Python", "Playwright", "UV"],
-      tagStyle: "tag-rose",
-      cardClass: "card-rose",
-      link: "https://github.com/Sawan-Mukhiya/Web-Scraping.git",
-    },
-    {
-      title: "Productivity Prediction",
-      description: "Performed EDA and built regression models (XGBoost) for garment worker data, achieving R² ≈ 0.94.",
-      tags: ["Pandas", "Scikit-learn"],
-      tagStyle: "tag-terracotta",
-      cardClass: "card-terracotta",
-      link: "https://github.com/Sawan-Mukhiya/Garment-Employee-Productivity-Prediction.git",
-    },
-  ];
-
   return (
     <main className="flex-grow pt-32 pb-24 px-6 max-w-5xl mx-auto w-full">
 
@@ -101,7 +20,7 @@ export default function Resume() {
             Résumé
           </h1>
           <p className="text-lg max-w-lg" style={{ color: 'var(--color-text-soft)', fontFamily: 'var(--font-body)' }}>
-            Data-driven developer skilled in Python, SQL, and ML — building intelligent tools from Kathmandu.
+            {content.resume.pageSubtitle}
           </p>
         </div>
         <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
@@ -148,9 +67,7 @@ export default function Resume() {
             Career Goals
           </h2>
           <p className="leading-relaxed italic text-base" style={{ color: 'var(--color-text-soft)', fontFamily: 'var(--font-body)' }}>
-            &ldquo;My goal is to become an AI/ML engineer who builds data-driven systems that make a real difference.
-            I am motivated to integrate data from multiple sources, apply machine learning concepts, and create
-            actionable insights — contributing to collaborative teams and real-world problems that matter.&rdquo;
+            &ldquo;{content.resume.careerGoal}&rdquo;
           </p>
         </div>
       </section>
@@ -171,7 +88,7 @@ export default function Resume() {
               Technical Skills
             </h3>
             <div className="space-y-6">
-              {technicalExpertise.map((item, idx) => (
+              {content.resume.technicalSkills.map((item, idx) => (
                 <div key={idx}>
                   <p
                     className="text-[10px] font-black uppercase tracking-[0.15em] mb-2.5"
@@ -207,11 +124,7 @@ export default function Resume() {
               Languages
             </h3>
             <div className="space-y-2">
-              {[
-                { lang: 'Nepali', level: 'Native', tagStyle: 'tag-terracotta' },
-                { lang: 'English', level: 'Proficient', tagStyle: 'tag-sage' },
-                { lang: 'Hindi', level: 'Fluent', tagStyle: 'tag-rose' },
-              ].map(({ lang, level, tagStyle }) => (
+              {content.resume.spokenLanguages.map(({ lang, level, tagStyle }) => (
                 <div
                   key={lang}
                   className="card-warm flex justify-between items-center p-4"
@@ -239,7 +152,7 @@ export default function Resume() {
             </h3>
 
             <div className="relative pl-8 space-y-8" style={{ borderLeft: '2px solid rgba(193,68,14,0.2)' }}>
-              {experience.map((item, idx) => (
+              {content.resume.experience.map((item, idx) => (
                 <div key={idx} className="relative">
                   <div
                     className="absolute -left-[41px] top-1 w-5 h-5 rounded-full border-4"
@@ -304,7 +217,7 @@ export default function Resume() {
               Key Projects
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              {keyProjects.map((project, idx) => (
+              {content.resume.keyProjects.map((project, idx) => (
                 <a
                   key={idx}
                   href={project.link}
@@ -349,35 +262,22 @@ export default function Resume() {
           Education
         </h3>
         <div className="space-y-4">
-          <div className="card-warm p-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-            <div>
-              <h4 className="text-xl font-black mb-1" style={{ color: 'var(--color-charcoal)', fontFamily: 'var(--font-display)' }}>
-                Bachelor in Computer Application (BCA)
-              </h4>
-              <p className="font-bold text-sm" style={{ color: 'var(--color-terracotta)' }}>
-                National College of Computer Studies, Paknajol, Kathmandu
-              </p>
+          {content.resume.education.map((edu, idx) => (
+            <div key={idx} className="card-warm p-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+              <div>
+                <h4 className="text-xl font-black mb-1" style={{ color: 'var(--color-charcoal)', fontFamily: 'var(--font-display)' }}>
+                  {edu.degree}
+                </h4>
+                <p className="font-bold text-sm" style={{ color: 'var(--color-terracotta)' }}>
+                  {edu.institution}
+                </p>
+              </div>
+              <div className="flex-shrink-0 text-right">
+                <p className="font-bold text-sm mb-1" style={{ color: 'var(--color-charcoal)' }}>{edu.period}</p>
+                <span className={edu.tagStyle}>{edu.status}</span>
+              </div>
             </div>
-            <div className="flex-shrink-0 text-right">
-              <p className="font-bold text-sm mb-1" style={{ color: 'var(--color-charcoal)' }}>2022 – Present</p>
-              <span className="tag-sage">In Progress</span>
-            </div>
-          </div>
-
-          <div className="card-warm p-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-            <div>
-              <h4 className="text-xl font-black mb-1" style={{ color: 'var(--color-charcoal)', fontFamily: 'var(--font-display)' }}>
-                +2 in Management (Computer Science)
-              </h4>
-              <p className="font-bold text-sm" style={{ color: 'var(--color-warm-brown)' }}>
-                Bijeswori Secondary School, Bijeswori, Kathmandu
-              </p>
-            </div>
-            <div className="flex-shrink-0 text-right">
-              <p className="font-bold text-sm mb-1" style={{ color: 'var(--color-charcoal)' }}>2020 – 2022</p>
-              <span className="tag-rose">Completed</span>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
     </main>

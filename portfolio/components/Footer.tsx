@@ -25,7 +25,7 @@ const Footer = () => {
               </span>
             </div>
             <p className="text-sm leading-relaxed" style={{ color: 'rgba(255,255,255,0.5)' }}>
-              AI/ML Engineer & Aspiring Developer crafting intelligent systems with heart.
+              AI/ML Engineer & Fullstack Developer crafting intelligent systems with heart.
               Based in{' '}
               <span style={{ color: 'var(--color-dusty-rose)' }}>Kathmandu, Nepal</span>.
             </p>
@@ -64,7 +64,7 @@ const Footer = () => {
               <div className="flex flex-col gap-2">
                 {[
                   { name: 'GitHub', href: 'https://github.com/Sawan-Mukhiya' },
-                  { name: 'LinkedIn', href: '#' },
+                  { name: 'LinkedIn', href: 'https://linkedin.com/in/sawan-mukhiya' },
                 ].map(({ name, href }) => (
                   <a
                     key={name}
@@ -91,7 +91,7 @@ const Footer = () => {
           style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}
         >
           <p className="text-[11px] font-bold tracking-[0.2em] uppercase" style={{ color: 'rgba(255,255,255,0.25)' }}>
-            © {new Date().getFullYear()} Sawan. Built with{' '}
+            © {new Date().getFullYear()} Sawan Mukhiya. Built with{' '}
             <span style={{ color: 'var(--color-dusty-rose)' }}>♥</span> and code.
           </p>
           <div className="flex items-center gap-2">

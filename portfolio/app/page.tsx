@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import content from '../content/portfolio.json';
 
 export default function Home() {
   return (
@@ -51,7 +52,7 @@ export default function Home() {
                 }}
               >
                 <span className="w-2 h-2 rounded-full animate-pulse" style={{ background: 'var(--color-sage)' }} />
-                Open to opportunities
+                {content.home.statusChip}
               </div>
 
               <h1
@@ -68,11 +69,8 @@ export default function Home() {
               <p
                 className="text-lg md:text-xl leading-relaxed mb-10 max-w-xl mx-auto lg:mx-0 animate-fade-up delay-200"
                 style={{ color: 'var(--color-text-soft)', fontFamily: 'var(--font-body)' }}
-              >
-                A <strong style={{ color: 'var(--color-terracotta)' }}>data-driven developer</strong> from Kathmandu
-                with strong <strong style={{ color: 'var(--color-sage)' }}>Python, SQL & ML</strong> skills —
-                turning raw data into meaningful, intelligent solutions.
-              </p>
+                dangerouslySetInnerHTML={{ __html: content.home.heroDescription }}
+              />
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-up delay-300">
                 <Link
@@ -93,11 +91,7 @@ export default function Home() {
 
               {/* Stat strip */}
               <div className="flex items-center gap-8 mt-12 justify-center lg:justify-start animate-fade-up delay-400">
-                {[
-                  { val: '7', label: 'Projects' },
-                  { val: 'BCA', label: 'Student' },
-                  { val: 'AI/ML', label: 'Focused' },
-                ].map((s) => (
+                {content.home.stats.map((s) => (
                   <div key={s.label} className="text-center">
                     <div
                       className="text-2xl font-black"
@@ -181,38 +175,13 @@ export default function Home() {
               className="text-4xl md:text-5xl font-black tracking-tight"
               style={{ color: 'var(--color-charcoal)' }}
             >
-              Building data-driven systems<br />
-              <span style={{ color: 'var(--color-terracotta)' }}>one commit at a time.</span>
+              {content.home.featuredSectionHeading}<br />
+              <span style={{ color: 'var(--color-terracotta)' }}>{content.home.featuredSectionSubheading}</span>
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              {
-                icon: 'analytics',
-                title: 'Data & ML',
-                desc: 'Applying Python, Pandas, and PyTorch to analyze datasets and build machine learning models that generate real insight.',
-                cardClass: 'card-terracotta',
-                iconBg: 'var(--color-terracotta)',
-                delay: 'delay-100',
-              },
-              {
-                icon: 'document_scanner',
-                title: 'AI Applications',
-                desc: 'Building intelligent systems like OCR pipelines using CNN + BiLSTM + CTC — turning research into working software.',
-                cardClass: 'card-sage',
-                iconBg: 'var(--color-sage)',
-                delay: 'delay-200',
-              },
-              {
-                icon: 'code_blocks',
-                title: 'Full Stack Dev',
-                desc: 'From Django REST APIs to React frontends and MySQL databases — complete, production-ready web applications.',
-                cardClass: 'card-rose',
-                iconBg: '#a0524a',
-                delay: 'delay-300',
-              },
-            ].map((item) => (
+            {content.home.featureCards.map((item) => (
               <div
                 key={item.title}
                 className={`${item.cardClass} p-8 reveal ${item.delay} transition-all duration-300 hover:-translate-y-2`}
@@ -247,9 +216,9 @@ export default function Home() {
             }}
           >
             <div>
-              <p className="text-xs font-black tracking-[0.2em] uppercase text-white/60 mb-2">Based in Kathmandu, Nepal</p>
+              <p className="text-xs font-black tracking-[0.2em] uppercase text-white/60 mb-2">{content.home.ctaLocation}</p>
               <h3 className="text-2xl md:text-3xl font-black text-white leading-tight">
-                Got a project or idea?<br />Let&apos;s build it together.
+                {content.home.ctaHeading}<br />{content.home.ctaSubheading}
               </h3>
             </div>
             <Link
@@ -276,12 +245,10 @@ export default function Home() {
             ✦ About me
           </span>
           <h2 className="text-3xl font-black tracking-tight mb-4 reveal" style={{ color: 'var(--color-charcoal)' }}>
-            Who is Sawan?
+            {content.home.mobileAbout.heading}
           </h2>
           <p className="text-base font-medium leading-relaxed mb-6 reveal delay-100" style={{ color: 'var(--color-text-soft)', fontFamily: 'var(--font-body)' }}>
-            I&apos;m a data-driven developer from Kathmandu pursuing my BCA at National College of Computer Studies.
-            I build end-to-end solutions: from automated web scrapers and ML regression models to full-stack web apps
-            and OCR systems — all backed by Python, Django, and React.
+            {content.home.mobileAbout.body}
           </p>
           <div className="grid grid-cols-2 gap-3 mb-6 reveal delay-200">
             {[
@@ -315,32 +282,7 @@ export default function Home() {
             Featured Work
           </h2>
           <div className="space-y-4">
-            {[
-              {
-                title: 'SnipTxt: OCR Platform',
-                desc: 'Web OCR system using CNN + BiLSTM + CTC for text recognition. Built with Django REST, React.js, and MySQL.',
-                tags: ['PyTorch', 'Django', 'React'],
-                badge: 'AI / ML',
-                link: 'https://github.com/Sawan-Mukhiya/SnipTxt-An-OCR-Platform-using-CRNN-with-CTC.git',
-                cardClass: 'card-terracotta',
-              },
-              {
-                title: 'NEPSE Stock Journal',
-                desc: 'Stock journal with tax/fee calculations, portfolio analytics, and financial reporting for Nepal\'s stock exchange.',
-                tags: ['Django', 'React', 'MySQL'],
-                badge: 'Full Stack',
-                link: 'https://github.com/Sawan-Mukhiya/NEPSE_Stock_journal_and_Taxes.git',
-                cardClass: 'card-sage',
-              },
-              {
-                title: 'Productivity Prediction',
-                desc: 'Garment employee productivity prediction with EDA and XGBoost regression, achieving R² ≈ 0.94.',
-                tags: ['Pandas', 'Scikit-learn', 'XGBoost'],
-                badge: 'Data Science',
-                link: 'https://github.com/Sawan-Mukhiya/Garment-Employee-Productivity-Prediction.git',
-                cardClass: 'card-rose',
-              },
-            ].map((p, i) => (
+            {content.home.mobileFeaturedProjects.map((p, i) => (
               <a
                 key={i}
                 href={p.link}
@@ -379,10 +321,10 @@ export default function Home() {
             ✦ Get in touch
           </span>
           <h2 className="text-3xl font-black tracking-tight mb-4 reveal" style={{ color: 'var(--color-charcoal)' }}>
-            Let&apos;s work together
+            {content.home.mobileContact.heading}
           </h2>
           <p className="text-base font-medium leading-relaxed mb-8 reveal delay-100" style={{ color: 'var(--color-text-soft)', fontFamily: 'var(--font-body)' }}>
-            Open to internships, collaborations, and freelance projects. Drop me a message and I&apos;ll get back within 24 hours.
+            {content.home.mobileContact.body}
           </p>
           <div className="flex flex-col gap-3 reveal delay-200">
             <a

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import content from '../../content/portfolio.json';
 
 export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -56,7 +57,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-[10px] font-black uppercase tracking-widest mb-0.5" style={{ color: 'var(--color-text-muted)' }}>Email</p>
-                  <p className="font-bold text-sm" style={{ color: 'var(--color-charcoal)' }}>sawanmukhiy@gmail.com</p>
+                  <p className="font-bold text-sm" style={{ color: 'var(--color-charcoal)' }}>{content.meta.email}</p>
                 </div>
               </div>
             </div>
@@ -76,8 +77,8 @@ export default function Contact() {
               </div>
               <div className="flex flex-col gap-2">
                 {[
-                  { name: 'GitHub', href: 'https://github.com/Sawan-Mukhiya', color: 'var(--color-sage)', icon: 'open_in_new' },
-                  { name: 'LinkedIn', href: 'https://linkedin.com/in/sawan-mukhiya', color: 'var(--color-terracotta)', icon: 'open_in_new' },
+                  { name: 'GitHub', href: content.meta.github, color: 'var(--color-sage)', icon: 'open_in_new' },
+                  { name: 'LinkedIn', href: content.meta.linkedin, color: 'var(--color-terracotta)', icon: 'open_in_new' },
                 ].map((s) => (
                   <a
                     key={s.name}
@@ -105,7 +106,7 @@ export default function Contact() {
             >
               <img
                 className="w-full h-full object-cover"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVom6NbdpbBpAk9ifW2zpVWUcgx_xCvSsbE9imqB2LKY-EGRolUh_JC3shNaJyX-MKCW-69-BbTNSnRpknLd4kKqgSQUmJvb4jmKu-PP7cEBkW8Id4nk74Z-IzuWtHsTSfl2slab7qBpG4oOUTKC3zeO1BiF_IzCPW86epMjTtziu45qDOuJ1bhjgi37mRl2_8t4rYjlOSU8G1IC_wBTME9_EcLAL0_SG902r0To6VCPS3MgJQkBkpTAL6FNijFhXwgI6deRLOaYVO"
+                src="https://media.istockphoto.com/id/637268486/photo/patan.jpg?s=612x612&w=0&k=20&c=IHL_X9XMlTKCFjXMAdJTr3dLoJTN-Vvn5QsYfNtnkgc="
                 alt="Kathmandu, Nepal"
               />
               <div
@@ -115,7 +116,7 @@ export default function Contact() {
               <div className="absolute bottom-4 left-4">
                 <p className="text-[10px] font-black uppercase tracking-[0.2em] text-white/60">Location</p>
                 <p className="text-lg font-black text-white" style={{ fontFamily: 'var(--font-display)' }}>
-                  Kathmandu, Nepal
+                  {content.meta.location}
                 </p>
               </div>
             </div>
@@ -227,7 +228,7 @@ export default function Contact() {
 
               <p className="text-center text-xs mt-5" style={{ color: 'var(--color-text-muted)', fontFamily: 'var(--font-body)' }}>
                 Or email me directly at{' '}
-                <a href="mailto:sawanmukhiy@gmail.com" className="font-bold" style={{ color: 'var(--color-terracotta)' }}>sawanmukhiy@gmail.com</a>
+                <a href={`mailto:${content.meta.email}`} className="font-bold" style={{ color: 'var(--color-terracotta)' }}>{content.meta.email}</a>
               </p>
 
               {isSubmitted && (
