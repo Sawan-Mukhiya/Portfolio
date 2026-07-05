@@ -1,7 +1,7 @@
 {
   "meta": {
     "name": "Sawan Mukhiya",
-    "title": "Aspiring AI Engineer",
+    "title": "Aspiring AI/ML Engineer, Fullstack Developer & Web Scraper",
     "location": "Chagal, Kathmandu, Nepal",
     "email": "sawanmukhiy@gmail.com",
     "phone": "+977-9808283220",
@@ -12,7 +12,7 @@
 
   "home": {
     "statusChip": "Open to opportunities",
-    "heroDescription": "A <strong style=\"color: var(--color-terracotta)\">data-driven developer</strong> from Kathmandu with strong <strong style=\"color: var(--color-sage)\">Python, SQL & ML</strong> skills — turning raw data into meaningful, intelligent solutions.",
+    "heroDescription": "An aspiring <strong style=\"color: var(--color-terracotta)\">AI/ML Engineer</strong> and <strong style=\"color: var(--color-sage)\">Fullstack Developer</strong> from Kathmandu. I love building intelligent systems, crafting responsive web apps, and untangling messy data as a web scraper.",
     "ctaHeading": "Got a project or idea?",
     "ctaSubheading": "Let's build it together.",
     "ctaLocation": "Based in Kathmandu, Nepal",
@@ -51,7 +51,7 @@
     ],
     "mobileAbout": {
       "heading": "Who is Sawan?",
-      "body": "I'm a data-driven developer from Kathmandu pursuing my BCA at National College of Computer Studies. I build end-to-end solutions: from automated web scrapers and ML regression models to full-stack web apps and OCR systems — all backed by Python, Django, and React."
+      "body": "I'm Sawan, an aspiring AI/ML Engineer, Fullstack Developer, and Web Scraper from Kathmandu. I love building end-to-end solutions—whether that's training ML regression models, crafting full-stack web apps with Django and React, or building automated web scrapers. I'm currently pursuing my BCA and always looking for the next exciting problem to solve."
     },
     "mobileFeaturedProjects": [
       {
@@ -89,9 +89,9 @@
     "pageSubtitle": "Aspiring AI Engineer · BCA Student · Based in Kathmandu, Nepal",
     "educationQuote": "Constant learning is the only way to navigate the evolving digital landscape.",
     "bio": [
-      "I am <strong style=\"color: var(--color-charcoal)\">Sawan Mukhiya</strong>, a data-driven developer from Kathmandu with strong <strong style=\"color: var(--color-terracotta)\">Python and SQL</strong> skills. My experience spans across analyzing datasets, building predictive ML models, and developing robust automated data extraction pipelines. I enjoy working at the intersection of data and intelligence — where clean pipelines meet real-world impact.",
-      "Currently pursuing my <strong style=\"color: var(--color-sage)\">Bachelor in Computer Application</strong> at National College of Computer Studies, I spend my time applying machine learning concepts through PyTorch and Scikit-learn. I also build automated web scrapers with Playwright, explore agentic AI workflows, and construct full-stack applications with Django REST and React.",
-      "Whether it's my OCR platform <strong style=\"color: var(--color-charcoal)\">SnipTxt</strong>, predicting garment employee productivity with XGBoost, or structuring messy web data into clean JSON schemas, my goal remains the same: writing code that makes complex problems feel effortless."
+      "I am <strong style=\"color: var(--color-charcoal)\">Sawan Mukhiya</strong>, an aspiring AI/ML Engineer, Fullstack Developer, and Web Scraper from Kathmandu. I love the thrill of turning ideas into reality, whether that means training a neural network to recognize text, designing a clean REST API, or scraping hard-to-reach data from the web. I enjoy working at the intersection of intelligence and software — where messy data transforms into clean, impactful applications.",
+      "Currently pursuing my <strong style=\"color: var(--color-sage)\">Bachelor in Computer Application</strong> at National College of Computer Studies, my days are a mix of studying and building. I spend my time training machine learning models using PyTorch and Scikit-learn, developing full-stack web apps with Django and React, and engineering robust web scrapers with Playwright.",
+      "Whether I'm building my OCR platform <strong style=\"color: var(--color-charcoal)\">SnipTxt</strong>, predicting productivity with XGBoost, or structuring complex web data into clean JSON schemas, my philosophy is simple: write code that solves real problems and makes life a little easier for everyone."
     ],
     "philosophyQuote": "Building intelligent systems that make data speak — from raw numbers to real decisions.",
     "philosophyBody": "I believe the best AI isn't the most complex — it's the most useful. Every project I build is a step toward software that genuinely helps people understand and act on information around them.",
@@ -142,8 +142,8 @@
   },
 
   "resume": {
-    "pageSubtitle": "Data-driven developer skilled in Python, SQL, and ML — building intelligent tools from Kathmandu.",
-    "careerGoal": "My goal is to become an AI/ML engineer who builds data-driven systems that make a real difference. I am motivated to integrate data from multiple sources, apply machine learning concepts, and create actionable insights — contributing to collaborative teams and real-world problems that matter.",
+    "pageSubtitle": "Aspiring AI/ML Engineer, Fullstack Developer, and Web Scraper — building intelligent and scalable tools from Kathmandu.",
+    "careerGoal": "My goal is to grow as an AI/ML Engineer and Fullstack Developer by building systems that make a genuine impact. I love diving into everything from training machine learning models and engineering web scrapers to developing complete web applications. I'm eager to join collaborative teams where I can bring ideas to life and solve real-world problems that matter.",
     "technicalSkills": [
       {
         "category": "Languages",

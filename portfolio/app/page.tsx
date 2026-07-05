@@ -305,7 +305,7 @@ export default function Home() {
           </div>
           <div className="mt-6 text-center reveal delay-300">
             <Link href="/projects" className="btn-primary inline-flex items-center gap-2 px-6 py-3 text-sm">
-              View all 7 projects →
+              View all projects →
             </Link>
           </div>
         </div>
@@ -327,11 +327,18 @@ export default function Home() {
             {content.home.mobileContact.body}
           </p>
           <div className="flex flex-col gap-3 reveal delay-200">
+            <Link
+              href="/contact"
+              className="btn-primary inline-flex items-center justify-center gap-2 px-8 py-4 text-base"
+            >
+              <span className="material-symbols-outlined text-lg">waving_hand</span>
+              Send a Message
+            </Link>
             <a
               href={`https://mail.google.com/mail/?view=cm&fs=1&to=${content.meta.email}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary inline-flex items-center justify-center gap-2 px-8 py-4 text-base"
+              className="btn-outline inline-flex items-center justify-center gap-2 px-8 py-4 text-base"
             >
               <span className="material-symbols-outlined text-lg">mail</span>
               {content.meta.email}

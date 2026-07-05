@@ -124,7 +124,7 @@ const Navbar = () => {
           {navLinks.map((link) => (
             <Link
               key={link.name}
-              href={link.mobileHref}
+              href={link.href}
               onClick={() => setIsMenuOpen(false)}
               className="text-base font-bold px-5 py-3 rounded-2xl transition-all"
               style={{
