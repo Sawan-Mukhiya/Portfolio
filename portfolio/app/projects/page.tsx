@@ -25,6 +25,25 @@ type Project = {
 export default function Projects() {
   const projects: Project[] = content.projects as Project[];
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [filter, setFilter] = useState('All');
+
+  const filters = ['All', 'AI/ML', 'Web Scraping', 'Others'];
+
+  const filteredProjects = projects.filter(project => {
+    if (filter === 'All') return true;
+    if (filter === 'AI/ML') {
+      return project.badge === 'AI / ML' || project.badge === 'Data Science';
+    }
+    if (filter === 'Web Scraping') {
+      return project.category.includes('Web Scraping') || project.badge === 'Automation' || project.badge === 'Data Engineering';
+    }
+    if (filter === 'Others') {
+      const isAIML = project.badge === 'AI / ML' || project.badge === 'Data Science';
+      const isScraping = project.category.includes('Web Scraping') || project.badge === 'Automation' || project.badge === 'Data Engineering';
+      return !isAIML && !isScraping;
+    }
+    return true;
+  });
 
   const closeModal = useCallback(() => {
     setSelectedProject(null);
@@ -45,11 +64,20 @@ export default function Projects() {
     return () => window.removeEventListener('keydown', handleKey);
   }, [closeModal]);
 
+  // Re-trigger reveal animation when filter changes
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      const elements = document.querySelectorAll('.project-card');
+      elements.forEach(el => el.classList.add('in-view'));
+    }, 50);
+    return () => clearTimeout(timer);
+  }, [filter]);
+
   return (
     <>
       <main className="flex-grow pt-32 pb-24 px-6 max-w-7xl mx-auto w-full">
         {/* Header */}
-        <section className="mb-20 text-center reveal">
+        <section className="mb-12 text-center reveal">
           <span
             className="inline-block text-xs font-black tracking-[0.25em] uppercase mb-5 px-4 py-2 rounded-full"
             style={{ color: 'var(--color-terracotta)', background: 'var(--color-terracotta-pale)' }}
@@ -66,18 +94,35 @@ export default function Projects() {
             </span>
           </h1>
           <p className="max-w-2xl mx-auto text-[1.1rem] font-medium leading-relaxed" style={{ color: 'var(--color-text-soft)', fontFamily: 'var(--font-body)' }}>
-            Seven open-source projects spanning AI/ML, fintech, web scraping, and game development —
+            Various open-source projects spanning AI/ML, fintech, web scraping, and game development —
             click any card to explore the full details.
           </p>
         </section>
 
+        {/* Filter */}
+        <div className="flex flex-wrap justify-center gap-3 mb-16 reveal delay-100">
+          {filters.map(f => (
+            <button
+              key={f}
+              onClick={() => setFilter(f)}
+              className={`px-6 py-2.5 rounded-full text-sm font-bold transition-all ${
+                filter === f 
+                  ? 'bg-[var(--color-terracotta)] text-white shadow-lg scale-105' 
+                  : 'bg-[var(--color-cream)] text-[var(--color-charcoal)] border-2 border-[var(--color-terracotta-pale)] hover:border-[var(--color-terracotta)] hover:text-[var(--color-terracotta)]'
+              }`}
+            >
+              {f}
+            </button>
+          ))}
+        </div>
+
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
-          {projects.map((project, index) => (
+          {filteredProjects.map((project, index) => (
             <article
-              key={index}
-              className="card-warm overflow-hidden flex flex-col group reveal"
-              style={{ animationDelay: `${index * 100}ms`, cursor: 'pointer' }}
+              key={project.title}
+              className="card-warm overflow-hidden flex flex-col group reveal project-card"
+              style={{ animationDelay: `${index * 50}ms`, cursor: 'pointer' }}
               onClick={() => openModal(project)}
               role="button"
               tabIndex={0}
@@ -361,7 +406,7 @@ export default function Projects() {
                   style={{ borderRadius: 'var(--radius-lg)' }}
                 >
                   <span className="material-symbols-outlined text-base">code</span>
-                  {selectedProject.linkText}
+                  {selectedProject.linkText || "GitHub"}
                   <span className="material-symbols-outlined text-base">open_in_new</span>
                 </a>
               </div>

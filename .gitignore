@@ -6,6 +6,7 @@
 .gemini/
 .cursor/
 .copilot/
+.agy/
 
 # Editor configs (keep if you want to share, otherwise ignore)
 .vscode/

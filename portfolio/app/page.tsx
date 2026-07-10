@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import content from '../content/portfolio.json';
+import FloatingBadge from '../components/FloatingBadge';
 
 export default function Home() {
   return (
@@ -108,7 +109,7 @@ export default function Home() {
             </div>
 
             {/* Right: Floating card stack */}
-            <div className="flex-shrink-0 relative w-80 h-80 md:w-96 md:h-96 lg:w-[450px] lg:h-[450px] animate-fade-scale delay-200">
+            <div className="flex-shrink-0 relative w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[450px] lg:h-[450px] animate-fade-scale delay-200 mx-auto lg:mx-0">
               <div
                 className="absolute inset-0 rounded-3xl rotate-6 animate-float"
                 style={{ background: 'var(--color-dusty-rose-pale)', border: '1.5px solid rgba(232,165,152,0.4)' }}
@@ -129,17 +130,41 @@ export default function Home() {
                 <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(193,68,14,0.15) 0%, transparent 60%)' }} />
               </div>
 
-              <div
-                className="absolute -bottom-4 -right-4 px-4 py-2 rounded-full text-xs font-black shadow-lg animate-float"
-                style={{
-                  background: 'var(--color-terracotta)',
-                  color: 'white',
-                  animationDelay: '0.5s',
-                  boxShadow: '0 8px 24px rgba(193,68,14,0.4)',
-                }}
-              >
-                AI/ML ✦
-              </div>
+              {/* Dynamic Radial Badges */}
+              {[
+                { text: "Agentic AI", color: "terracotta" },
+                { text: "React/Next", color: "sage" },
+                { text: "FastAPI", color: "terracotta" },
+                { text: "Web Scraping", color: "sage" },
+                { text: "Python", color: "terracotta" },
+                { text: "AI/ML", color: "sage" },
+                { text: "Node/Express", color: "terracotta" },
+                { text: "SQL", color: "sage" },
+                { text: "Django", color: "terracotta" }
+              ].map((badge, i, arr) => {
+                const angle = (i * 360) / arr.length;
+                return (
+                  <div
+                    key={badge.text}
+                    className="absolute inset-0 pointer-events-none z-10"
+                    style={{ transform: `rotate(${angle}deg)` }}
+                  >
+                    <div 
+                      // top position dictates radial distance. Positive tucks inward, negative pushes outward.
+                      className="absolute left-1/2 top-[32px] sm:top-[24px] md:-top-[16px] lg:-top-[32px] pointer-events-auto"
+                      style={{ 
+                        transform: `translate(-50%, -50%) rotate(-${angle}deg)`,
+                      }}
+                    >
+                      <FloatingBadge 
+                        text={badge.text} 
+                        color={badge.color as "terracotta" | "sage"} 
+                        delay={`${i * 0.2}s`} 
+                      />
+                    </div>
+                  </div>
+                );
+              })}
 
               <div
                 className="absolute -top-6 -left-6 w-12 h-12 rounded-full border-2 border-dashed animate-spin-slow"

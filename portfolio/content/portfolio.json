@@ -19,7 +19,7 @@
     "featuredSectionHeading": "Building data-driven systems",
     "featuredSectionSubheading": "one commit at a time.",
     "stats": [
-      { "val": "7", "label": "Projects" },
+      { "val": "12+", "label": "Projects" },
       { "val": "BCA", "label": "Student" },
       { "val": "AI/ML", "label": "Focused" }
     ],
@@ -147,12 +147,12 @@
     "technicalSkills": [
       {
         "category": "Languages",
-        "skills": ["Python", "SQL", "Java", "JavaScript", "PHP", "C"],
+        "skills": ["Python", "SQL", "Java", "JavaScript", "PHP","C#", "C"],
         "tagStyle": "tag-terracotta"
       },
       {
         "category": "Data Analysis & ML",
-        "skills": ["Pandas", "NumPy", "Matplotlib", "Seaborn", "Scikit-learn", "PyTorch"],
+        "skills": ["Pandas", "NumPy", "Matplotlib", "Seaborn", "Scikit-learn", "PyTorch", "Optuna"],
         "tagStyle": "tag-sage"
       },
       {
@@ -162,7 +162,7 @@
       },
       {
         "category": "Frameworks & Backend",
-        "skills": ["Django REST", "FastAPI", "React.js", "Celery", "WebSockets"],
+        "skills": ["Django REST", "FastAPI", "Langchain", "Langgraph", "Node.js", "Express.js", "React.js", "Next.js", "tailwindcss", "Celery", "WebSockets"],
         "tagStyle": "tag-terracotta"
       },
       {
@@ -172,7 +172,7 @@
       },
       {
         "category": "Other",
-        "skills": ["Agentic AI", "NLP", "Computer Vision", "Agile", "QA"],
+        "skills": ["Agentic AI","Generative AI", "NLP", "Computer Vision", "PowerBI", "Cloudflare", "n8n"],
         "tagStyle": "tag-rose"
       }
     ],
@@ -183,13 +183,27 @@
     ],
     "experience": [
       {
+        "role": "AI/ML Engineer Intern",
+        "company": "Camden Tools Ltd (UK-based construction tools retailer)",
+        "period": "May 6, 2026 — July 6, 2026",
+        "isActive": false,
+        "description": [
+          "Developed a compliance-aware product classification pipeline for restricted inventory (knives, fragile goods, liquids, electrical plugs).",
+          "Managed end-to-end data handling, including rigorous data cleaning, feature engineering, and both manual and script-based data labeling.",
+          "Engineered machine learning models using XGBoost and LightGBM, optimized with Optuna for hyper-parameter tuning, and integrated 384-dimensional SentenceTransformer embeddings.",
+          "Built a FastAPI microservice backend to expose classification endpoints and manage probability threshold-based human-in-the-loop review logic.",
+          "Developed an Admin Dashboard using Next.js for manual review workflows, backed by MariaDB/MySQL for audit logging and inventory tracking.",
+          "Containerized the entire machine learning and backend stack using Docker for scalable production deployment."
+        ]
+      },
+      {
         "role": "BCA Student & Independent Developer",
         "company": "National College of Computer Studies",
         "period": "2022 — Present",
         "isActive": true,
         "description": [
           "Pursuing Bachelor in Computer Application with a focus on AI, data science, and software engineering.",
-          "Built 7 independent projects spanning OCR, fintech, web scraping, ML models, and game development.",
+          "Built various independent projects spanning OCR, fintech, web scraping, ML models, and game development.",
           "Developed automated web-scraping pipelines to extract and normalize data into structured JSON/CSV schemas.",
           "Continuously applying ML/AI concepts through PyTorch and Scikit-learn, with emphasis on computer vision and NLP."
         ]
@@ -212,6 +226,13 @@
       }
     ],
     "keyProjects": [
+      {
+        "title": "Inventory Classification System",
+        "description": "Enterprise ML pipeline for classifying restricted inventory using XGBoost, SentenceTransformers, FastAPI, and a Next.js dashboard.",
+        "tags": ["FastAPI", "XGBoost", "Next.js"],
+        "tagStyle": "tag-sage",
+        "cardClass": "card-sage"
+      },
       {
         "title": "SnipTxt: OCR Platform",
         "description": "Web OCR system using CNN + BiLSTM + CTC for text recognition with Django REST and React.js.",
@@ -248,6 +269,163 @@
   },
 
   "projects": [
+    {
+      "title": "Java CNN from Scratch",
+      "badge": "AI / ML",
+      "badgeBg": "var(--color-sage)",
+      "accentColor": "var(--color-sage)",
+      "category": "Deep Learning · Java",
+      "description": "A Convolutional Neural Network (CNN) built entirely from scratch in Java, implementing forward passes and backpropagation without external ML frameworks.",
+      "longDescription": [
+        "This project is an educational exploration into the core mechanics of deep learning. I built a Convolutional Neural Network (CNN) entirely from scratch using plain Java, without relying on external libraries like TensorFlow or PyTorch.",
+        "The implementation includes manual coding of core neural network layers: Convolutional Layers for feature extraction, Max Pooling Layers for spatial downsampling, and Fully Connected Layers for final classification. It handles forward passes, backward passes (backpropagation), and gradient updates using stochastic gradient descent.",
+        "The network is configured and tested against the classic MNIST dataset to recognize handwritten digits, successfully reading raw pixel data and training its weights iteratively to achieve accurate classifications."
+      ],
+      "highlights": [
+        "Engineered a CNN architecture from scratch in Java without external ML libraries",
+        "Implemented Convolution, Max Pooling, and Fully Connected layers from the ground up",
+        "Developed custom backpropagation logic to manually compute and apply error gradients",
+        "Built data parsers to process the 70,000-image MNIST CSV dataset into 28x28 matrices",
+        "Utilized Object-Oriented patterns (Builder pattern, Polymorphism) to manage network graphs"
+      ],
+      "tags": ["Java", "Deep Learning", "CNN", "Math"],
+      "tagStyles": ["tag-terracotta", "tag-sage", "tag-rose", "tag-terracotta"],
+      "techDetails": [
+        { "label": "Language", "value": "Java (Pure OOP)" },
+        { "label": "Domain", "value": "Computer Vision" },
+        { "label": "Dataset", "value": "MNIST (Handwritten Digits)" },
+        { "label": "Concepts", "value": "Backpropagation, Gradient Descent" }
+      ],
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCrB1DJMHWAwy0rfxVYE7qNBHYkm32cO3kDK1kL1R_MHXYnYSmnuklD0Jdg9hiQNzLno_OdyfmVfYC2aycmROWFieEnPdCwA0-0t0mtFpdbIVILgvbwxWOrMioeyb1R4hBeMhnxqqlTyI-uGsqrUqtMXWLrrOJqDsXP-EskKCQRKtwjw33fspTdQD2qCSM",
+      "link": "https://github.com/Sawan-Mukhiya/Convolutional-Neural-Network-CNN--using-Java"
+    },
+    {
+      "title": "IT Connect: Smart Event Hub",
+      "badge": "Web App",
+      "badgeBg": "var(--color-sage)",
+      "accentColor": "var(--color-sage)",
+      "category": "Full Stack Development · Event Management",
+      "description": "A comprehensive Django-based event management platform enabling seamless event discovery, registration, and management with role-based access control.",
+      "longDescription": [
+        "IT Connect Smart Event Hub is a full-featured event management system that bridges the gap between event organizers and students. The platform provides a secure, scalable solution for discovering events, registering for participation, and managing event workflows with admin approval processes.",
+        "It features role-based access control for Students, Organizers, and Administrators. Students benefit from smart registration, seat availability tracking, and AI-powered event recommendations based on their interests. Organizers get a dedicated dashboard to create, manage, and analyze event performance.",
+        "To maintain quality, the system includes an Admin Approval System where administrators review and approve/reject pending events before they are publicly listed. The backend is powered by Django 5.2 with comprehensive test coverage."
+      ],
+      "highlights": [
+        "Developed a multi-role authentication system for Students, Organizers, and Admins",
+        "Implemented smart event registration with real-time seat availability tracking",
+        "Built an AI-powered event recommendation engine based on user interests",
+        "Engineered an administrative approval pipeline for content moderation",
+        "Achieved 100% test coverage with 31 comprehensive unit tests passing",
+        "Designed responsive card-based dashboards using HTML5, CSS3, and JavaScript"
+      ],
+      "tags": ["Django", "Python", "SQLite", "HTML/CSS", "JavaScript"],
+      "tagStyles": ["tag-terracotta", "tag-sage", "tag-rose", "tag-terracotta", "tag-sage"],
+      "techDetails": [
+        { "label": "Backend", "value": "Django, Python" },
+        { "label": "Frontend", "value": "HTML5, CSS3, JS" },
+        { "label": "Database", "value": "SQLite / PostgreSQL" },
+        { "label": "Testing", "value": "Django Test Framework" }
+      ],
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCrB1DJMHWAwy0rfxVYE7qNBHYkm32cO3kDK1kL1R_MHXYnYSmnuklD0Jdg9hiQNzLno_OdyfmVfYC2aycmROWFieEnPdCwA0-0t0mtFpdbIVILgvbwxWOrMioeyb1R4hBeMhnxqqlTyI-uGsqrUqtMXWLrrOJqDsXP-EskKCQRKtwjw33fspTdQD2qCSM",
+      "link": "https://github.com/Sawan-Mukhiya/IT-connect"
+    },
+    {
+      "title": "Job Description Scraper",
+      "badge": "Data Engineering",
+      "badgeBg": "var(--color-rose)",
+      "accentColor": "var(--color-rose)",
+      "category": "Web Scraping · Data Extraction",
+      "description": "An automated web scraping pipeline built with Scrapy to extract and structure Data Analyst job postings from reed.co.uk.",
+      "longDescription": [
+        "This project is a dedicated Python web scraper built using the Scrapy framework. It is configured to navigate reed.co.uk and automatically extract high-quality datasets of 'Data Analyst' job postings for market analysis.",
+        "The pipeline is designed to reliably extract key details such as Job Title, Salary, Contract Type, Job Type, and Location. The extracted data is then normalized and exported directly into structured CSV formats for further analysis in spreadsheets or Pandas.",
+        "By utilizing Scrapy's asynchronous crawling capabilities, the scraper efficiently parses multiple pages and handles data pipelines, making it a robust tool for data collection."
+      ],
+      "highlights": [
+        "Engineered an asynchronous web scraper using the Scrapy framework",
+        "Targeted and extracted structured data from reed.co.uk job listings",
+        "Parsed critical job details including Salary, Contract Type, and Location",
+        "Exported normalized datasets into CSV format for data analysis",
+        "Managed project dependencies using isolated Python virtual environments"
+      ],
+      "tags": ["Python", "Scrapy", "Web Scraping", "Data Extraction"],
+      "tagStyles": ["tag-sage", "tag-rose", "tag-terracotta", "tag-sage"],
+      "techDetails": [
+        { "label": "Language", "value": "Python" },
+        { "label": "Framework", "value": "Scrapy" },
+        { "label": "Output", "value": "CSV" },
+        { "label": "Domain", "value": "Data Collection" }
+      ],
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCrB1DJMHWAwy0rfxVYE7qNBHYkm32cO3kDK1kL1R_MHXYnYSmnuklD0Jdg9hiQNzLno_OdyfmVfYC2aycmROWFieEnPdCwA0-0t0mtFpdbIVILgvbwxWOrMioeyb1R4hBeMhnxqqlTyI-uGsqrUqtMXWLrrOJqDsXP-EskKCQRKtwjw33fspTdQD2qCSM",
+      "link": "https://github.com/Sawan-Mukhiya/Job_Description_Scraping"
+    },
+    {
+      "title": "ShopEase E-Commerce Platform",
+      "badge": "Web App",
+      "badgeBg": "var(--color-terracotta)",
+      "accentColor": "var(--color-terracotta)",
+      "category": "Full Stack Web · E-Commerce",
+      "description": "A fully functional e-commerce web application featuring product categories, user authentication, a shopping cart, payment integration, and a comprehensive admin panel.",
+      "longDescription": [
+        "ShopEase is a dynamic e-commerce web platform designed to offer a seamless shopping experience for apparel, including distinct categories for men and women, premium products, and summer collections.",
+        "Built on a solid PHP and MySQL backend, the platform securely manages user authentication, dynamic product inventories, wishlist (favorites) tracking, and a comprehensive checkout process incorporating a functional cart and payment interface.",
+        "The frontend is carefully crafted with HTML, vanilla CSS, and JavaScript, featuring interactive product carousels, responsive grids, and an intuitive user interface. An integrated admin panel provides shop managers with the tools to efficiently oversee products, categories, and orders."
+      ],
+      "highlights": [
+        "Developed a robust PHP backend with MySQL database integration for managing users, products, and orders",
+        "Implemented secure user authentication, shopping cart functionality, and payment integration",
+        "Engineered an intuitive admin dashboard for managing the store's inventory and customer data",
+        "Built interactive UI components using vanilla JavaScript, including a dynamic product carousel and responsive layout",
+        "Enabled personalized user features such as a favorites/wishlist system tied to user sessions"
+      ],
+      "tags": ["PHP", "MySQL", "E-Commerce", "JavaScript"],
+      "tagStyles": ["tag-terracotta", "tag-sage", "tag-rose", "tag-terracotta"],
+      "techDetails": [
+        { "label": "Backend", "value": "PHP" },
+        { "label": "Frontend", "value": "HTML5, CSS3, JS" },
+        { "label": "Database", "value": "MySQL" },
+        { "label": "Domain", "value": "E-Commerce" }
+      ],
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCrB1DJMHWAwy0rfxVYE7qNBHYkm32cO3kDK1kL1R_MHXYnYSmnuklD0Jdg9hiQNzLno_OdyfmVfYC2aycmROWFieEnPdCwA0-0t0mtFpdbIVILgvbwxWOrMioeyb1R4hBeMhnxqqlTyI-uGsqrUqtMXWLrrOJqDsXP-EskKCQRKtwjw33fspTdQD2qCSM",
+      "link": "https://github.com/princeSthaa/ecom"
+    },
+    {
+      "title": "Inventory Classification System",
+      "badge": "AI / ML",
+      "badgeBg": "var(--color-sage)",
+      "accentColor": "var(--color-sage)",
+      "category": "Machine Learning · Enterprise Backend",
+      "description": "An enterprise product classification system built for Camden Tools Ltd (a UK-based retailer) to automate the categorization of restricted inventory items using NLP embeddings and XGBoost.",
+      "longDescription": [
+        "The Inventory Classification System is a production-grade machine learning pipeline developed to automate compliance checks for restricted items such as knives, fragile goods, liquids, and electrical plugs.",
+        "The project required extensive end-to-end data handling, including rigorous data cleaning, feature engineering, and a combination of script-based and manual data labeling to build robust training sets.",
+        "The core intelligence relies on 384-dimensional semantic embeddings generated via SentenceTransformers. These are fed into XGBoost and LightGBM classifiers, which were rigorously optimized using Optuna for hyper-parameter tuning. A robust FastAPI microservice orchestrates the inference and exposes endpoints for real-time classification.",
+        "To ensure 100% compliance, the system features a human-in-the-loop workflow. Borderline predictions trigger a review flag, which administrators handle through a dedicated Next.js Admin Dashboard. All classification runs, audit logs, and review actions are securely persisted in a relational MariaDB database, and the entire stack is containerized with Docker."
+      ],
+      "highlights": [
+        "Executed complete data handling pipelines: cleaning, feature engineering, and script-based/manual labeling",
+        "Generated 384-dimensional product embeddings using SentenceTransformers",
+        "Trained and optimized XGBoost and LightGBM classification models using Optuna for hyper-parameter tuning",
+        "Engineered a scalable FastAPI backend with secure endpoints and DB orchestration",
+        "Developed a Next.js Admin Dashboard for human-in-the-loop manual review",
+        "Designed normalized MariaDB schemas for inventory, classification runs, and compliance logs",
+        "Containerized the end-to-end ML and web application stack using Docker"
+      ],
+      "tags": ["FastAPI", "XGBoost", "Optuna", "Next.js", "Docker"],
+      "tagStyles": ["tag-terracotta", "tag-sage", "tag-rose", "tag-terracotta", "tag-sage"],
+      "techDetails": [
+        { "label": "Backend", "value": "FastAPI, Python" },
+        { "label": "Frontend", "value": "Next.js, React" },
+        { "label": "ML Models", "value": "XGBoost, LightGBM, SentenceTransformers" },
+        { "label": "ML Tools", "value": "Optuna" },
+        { "label": "Database", "value": "MariaDB / MySQL" },
+        { "label": "Deployment", "value": "Docker" },
+        { "label": "Domain", "value": "Enterprise Inventory Compliance" }
+      ],
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCrB1DJMHWAwy0rfxVYE7qNBHYkm32cO3kDK1kL1R_MHXYnYSmnuklD0Jdg9hiQNzLno_OdyfmVfYC2aycmROWFieEnPdCwA0-0t0mtFpdbIVILgvbwxWOrMioeyb1R4hBeMhnxqqlTyI-uGsqrUqtMXWLrrOJqDsXP-EskKCQRKtwjw33fspTdQD2qCSM",
+      "linkText": "Private project"
+    },
     {
       "title": "SnipTxt: OCR Platform",
       "badge": "AI / ML",
@@ -319,30 +497,30 @@
       "badge": "Web App",
       "badgeBg": "#a0524a",
       "accentColor": "#a0524a",
-      "category": "Web Application · Academic",
-      "description": "A web app for evaluating and converting mathematical expressions. Uses MySQL to store and query expression data and conversion results, with a clean PHP backend.",
+      "category": "Web Application · Algorithms",
+      "description": "A web application for evaluating mathematical expressions and converting between infix, prefix, and postfix notations, featuring user authentication and history tracking.",
       "longDescription": [
-        "ExEC (Expression Evaluation & Conversion Tool) is a web application that provides a comprehensive environment for working with mathematical expressions in multiple notations. Users can input expressions in infix, prefix, or postfix notation, and the system evaluates them and converts between notations seamlessly.",
-        "The application is built with a PHP backend that handles the parsing, evaluation, and conversion logic using stack-based algorithms — the same algorithms studied in Data Structures & Algorithms coursework. A MySQL database stores expression inputs and their evaluated results, enabling users to maintain an expression history and look up previous calculations.",
-        "The frontend provides a clean, intuitive interface where users can select their input notation, enter an expression, and instantly see evaluation results alongside notation conversions. The tool is particularly useful for computer science students learning about expression trees and notation systems."
+        "ExEC (Expression Evaluation & Conversion Tool) provides a comprehensive environment for working with mathematical expressions. It allows users to instantly convert expressions between different notation systems and evaluate results with custom variable substitution.",
+        "Built on a robust three-tier architecture, the application integrates a secure authentication layer using bcrypt password hashing. The PHP backend utilizes the Shunting-yard algorithm and stack-based parsing to handle complex conversion and evaluation logic efficiently.",
+        "A responsive frontend designed with HTML, CSS, and JavaScript ensures real-time expression validation before processing. All user interactions, including conversion outputs and evaluation results, are persistently stored in a MySQL database, enabling users to seamlessly track their activity history."
       ],
       "highlights": [
-        "Implemented infix-to-prefix, infix-to-postfix, and postfix-to-infix conversion algorithms",
-        "Built expression evaluator using stack-based algorithms",
-        "Stored expression history and results in MySQL for query and retrieval",
-        "Designed clean PHP backend with modular logic for parsing and evaluation",
-        "Useful academic tool for understanding algorithmic expression handling",
-        "Supports multiple mathematical operators with correct precedence rules"
+        "Engineered stack-based conversion algorithms for seamless transformation between infix, prefix, and postfix notations",
+        "Implemented the Shunting-yard algorithm for precise parsing and evaluation of complex mathematical expressions",
+        "Developed a secure user authentication system utilizing bcrypt for robust password hashing",
+        "Added real-time frontend expression validation and variable substitution features using JavaScript",
+        "Maintained user activity by persisting conversion and evaluation histories in a normalized MySQL database",
+        "Structured the application using a scalable three-tier architecture separating frontend, API, and database layers"
       ],
-      "tags": ["PHP", "MySQL"],
-      "tagStyles": ["tag-terracotta", "tag-rose"],
+      "tags": ["PHP", "MySQL", "Algorithms", "Auth"],
+      "tagStyles": ["tag-terracotta", "tag-sage", "tag-rose", "tag-terracotta"],
       "techDetails": [
-        { "label": "Backend", "value": "PHP" },
-        { "label": "Database", "value": "MySQL" },
-        { "label": "Core Algorithm", "value": "Stack-based expression parsing" },
-        { "label": "Input Notations", "value": "Infix, Prefix, Postfix" },
-        { "label": "Features", "value": "Evaluate + Convert expressions" },
-        { "label": "Domain", "value": "Data Structures & Algorithms" }
+        { "label": "Architecture", "value": "Three-tier architecture" },
+        { "label": "Algorithms", "value": "Shunting-yard, Stack parsing" },
+        { "label": "Database", "value": "MySQL (PDO)" },
+        { "label": "Security", "value": "bcrypt hashing, Sessions" },
+        { "label": "Frontend", "value": "HTML5, CSS3, JS" },
+        { "label": "Domain", "value": "Data Structures" }
       ],
       "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDnwAMP2RxDxY_a6eChssw14XumJvDDlHrvx3-PVWg9cuo-Z6N1FJqHS63kTKXRoY-pkA9GORJ7NnKu2Iw57hJYPibPkudbcY-a0ac1Tw1JCSoQGt5zbrUG_ECKYtGXD8UvuWXGj7zzu0SfenjoUdn9LrTcfCA5EW0fcs_LAXSu_Xi6iia9c02Y-ZNsLVA8HWFR8d1Z9RRZ44pfj2EIukXXxlNTCLJDbGtdpn899goSZI6rvQ7JqmG1MJ-GlgWVEJ_xIkv7O3IVCHZw",
       "link": "https://github.com/Sawan-Mukhiya/ExEC-Expression_Evaluation_And_Conversion_Tool.git"

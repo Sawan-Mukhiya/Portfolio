@@ -168,7 +168,7 @@ export default function Contact() {
                       className="input-warm w-full px-4 py-3 text-sm"
                       id="name"
                       name="name"
-                      placeholder="John Doe"
+                      placeholder="Enter Full Name"
                       required
                       type="text"
                     />
@@ -185,7 +185,7 @@ export default function Contact() {
                       className="input-warm w-full px-4 py-3 text-sm"
                       id="email"
                       name="email"
-                      placeholder="john@example.com"
+                      placeholder="ram@gmail.com"
                       required
                       type="email"
                     />

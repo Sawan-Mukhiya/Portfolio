@@ -244,6 +244,21 @@ h1, h2, h3, h4, h5, .font-display, .font-heading {
   to   { transform: rotate(360deg); }
 }
 
+@keyframes spin-reverse {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(-360deg); }
+}
+
+@keyframes orbit {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes counter-orbit {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+
 @keyframes sparkle {
   0%   { opacity: 0; transform: scale(0) rotate(0deg); }
   50%  { opacity: 1; transform: scale(1) rotate(180deg); }
@@ -282,13 +297,16 @@ h1, h2, h3, h4, h5, .font-display, .font-heading {
 .animate-fade-right   { animation: fadeInRight 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
 .animate-fade-scale   { animation: fadeInScale 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
 .animate-spin-slow    { animation: spin-slow 12s linear infinite; }
+.animate-spin-reverse { animation: spin-reverse 12s linear infinite; }
+.animate-orbit        { animation: orbit 24s linear infinite; }
+.animate-counter-orbit{ animation: counter-orbit 24s linear infinite; }
 .animate-bounce-in    { animation: bounceIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
 .animate-wave         { animation: waveWiggle 2.5s ease-in-out infinite; }
 
 @keyframes sway {
-  0%   { transform: rotate(-3deg); }
-  50%  { transform: rotate(3deg); }
-  100% { transform: rotate(-3deg); }
+  0%   { transform: rotate(-1deg); }
+  50%  { transform: rotate(1deg); }
+  100% { transform: rotate(-1deg); }
 }
 
 .animate-sway {
