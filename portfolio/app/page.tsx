@@ -109,7 +109,7 @@ export default function Home() {
             </div>
 
             {/* Right: Floating card stack */}
-            <div className="flex-shrink-0 relative w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[450px] lg:h-[450px] animate-fade-scale delay-200 mx-auto lg:mx-0">
+            <div className="flex-shrink-0 relative w-80 h-80 sm:w-96 sm:h-96 md:w-[420px] md:h-[420px] lg:w-[450px] lg:h-[450px] animate-fade-scale delay-200 mx-auto lg:mx-0">
               <div
                 className="absolute inset-0 rounded-3xl rotate-6 animate-float"
                 style={{ background: 'var(--color-dusty-rose-pale)', border: '1.5px solid rgba(232,165,152,0.4)' }}

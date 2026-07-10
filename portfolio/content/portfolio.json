@@ -205,7 +205,8 @@
           "Pursuing Bachelor in Computer Application with a focus on AI, data science, and software engineering.",
           "Built various independent projects spanning OCR, fintech, web scraping, ML models, and game development.",
           "Developed automated web-scraping pipelines to extract and normalize data into structured JSON/CSV schemas.",
-          "Continuously applying ML/AI concepts through PyTorch and Scikit-learn, with emphasis on computer vision and NLP."
+          "Continuously applying ML/AI concepts through PyTorch and Scikit-learn, with emphasis on computer vision and NLP.",
+          "Always having an eye on Agentic AI, Generative AI and latest AI advancements"
         ]
       }
     ],
@@ -250,7 +251,7 @@
         "link": "https://github.com/Sawan-Mukhiya/NEPSE_Stock_journal_and_Taxes.git"
       },
       {
-        "title": "Web-Scraping Pipeline",
+        "title": "ekantipur Scraping Pipeline",
         "description": "Automated scraper using Playwright to extract daily entertainment articles and media into structured JSON.",
         "tags": ["Python", "Playwright", "UV"],
         "tagStyle": "tag-rose",
@@ -559,14 +560,14 @@
       "link": "https://github.com/Sawan-Mukhiya/Chess-Arena-An-Offline-Chess-Game.git"
     },
     {
-      "title": "Web-Scraping Pipeline",
+      "title": "ekantipur Scraping Pipeline",
       "badge": "Automation",
       "badgeBg": "#a0524a",
       "accentColor": "#a0524a",
       "category": "Web Scraping · Data Pipeline",
       "description": "Automated scraper using Playwright to extract daily entertainment articles and media. Features robust error handling, automated navigation, and extraction into structured JSON.",
       "longDescription": [
-        "The Web-Scraping Pipeline is a production-grade automated data extraction system built in Python using Playwright for browser automation. The primary target is ekantipur.com, one of Nepal's leading news portals, from which the scraper extracts the top 5 daily entertainment articles and the cartoon of the day.",
+        "The ekantipur Scraping Pipeline is a production-grade automated data extraction system built in Python using Playwright for browser automation. The primary target is ekantipur.com, one of Nepal's leading news portals, from which the scraper extracts the top 5 daily entertainment articles and the cartoon of the day.",
         "The scraper uses the UV package manager for dependency isolation and reproducible environments. Playwright handles headless browser automation, navigating JavaScript-heavy pages that traditional HTTP-based scrapers cannot handle. The system implements robust error handling and validation checks at each extraction step to ensure data accuracy even when the target website's structure changes.",
         "Extracted data — including article titles, URLs, summaries, images, and publication timestamps — is parsed, normalized, and saved into structured JSON files. The pipeline is designed to be run on a schedule, making it suitable for building datasets, monitoring content, or feeding downstream data applications."
       ],
