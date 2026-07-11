@@ -27,6 +27,7 @@ export default function Projects() {
   const projects: Project[] = content.projects as Project[];
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [filter, setFilter] = useState('All');
+  const [isImageFullscreen, setIsImageFullscreen] = useState(false);
 
   const filters = ['All', 'AI/ML', 'Web Scraping', 'Others'];
 
@@ -48,6 +49,7 @@ export default function Projects() {
 
   const closeModal = useCallback(() => {
     setSelectedProject(null);
+    setIsImageFullscreen(false);
     document.body.style.overflow = '';
   }, []);
 
@@ -59,11 +61,17 @@ export default function Projects() {
   // Close on Escape key
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') closeModal();
+      if (e.key === 'Escape') {
+        if (isImageFullscreen) {
+          setIsImageFullscreen(false);
+        } else {
+          closeModal();
+        }
+      }
     };
     window.addEventListener('keydown', handleKey);
     return () => window.removeEventListener('keydown', handleKey);
-  }, [closeModal]);
+  }, [closeModal, isImageFullscreen]);
 
   // Re-trigger reveal animation when filter changes
   useEffect(() => {
@@ -267,16 +275,26 @@ export default function Projects() {
             <div className="overflow-y-auto flex-1" style={{ scrollbarWidth: 'thin', scrollbarColor: 'var(--color-terracotta-pale) transparent' }}>
 
               {/* Hero Image */}
-              <div className="relative w-full" style={{ height: '240px', flexShrink: 0 }}>
+              <div 
+                className="relative w-full group cursor-pointer overflow-hidden" 
+                style={{ height: '240px', flexShrink: 0 }}
+                onClick={() => setIsImageFullscreen(true)}
+              >
                 <img
                   src={selectedProject.image}
                   alt={selectedProject.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div
-                  className="absolute inset-0"
+                  className="absolute inset-0 pointer-events-none"
                   style={{ background: `linear-gradient(to top, var(--color-cream) 0%, transparent 55%)` }}
                 />
+                <div className="absolute inset-0 flex items-center justify-center opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 md:bg-black/10">
+                  <span className="flex items-center gap-2 text-white font-bold text-sm px-4 py-2 rounded-full shadow-lg" style={{ background: 'rgba(44, 36, 22, 0.65)', backdropFilter: 'blur(4px)' }}>
+                    <span className="material-symbols-outlined text-base">zoom_in</span>
+                    Click to enlarge
+                  </span>
+                </div>
                 {/* Badge */}
                 <div className="absolute top-4 left-4">
                   <span
@@ -413,6 +431,49 @@ export default function Projects() {
               </div>
             </div>
           </div>
+        </div>
+      )}
+
+      {/* ── FULLSCREEN IMAGE MODAL ── */}
+      {isImageFullscreen && selectedProject && (
+        <div
+          className="fixed inset-0 z-[10000] flex items-center justify-center p-4"
+          role="dialog"
+          aria-modal="true"
+          aria-label={`Fullscreen image of ${selectedProject.title}`}
+          onClick={() => setIsImageFullscreen(false)}
+          style={{
+            background: 'rgba(20, 16, 10, 0.9)',
+            backdropFilter: 'blur(8px)',
+            WebkitBackdropFilter: 'blur(8px)',
+            animation: 'fadeInModal 0.22s ease-out',
+          }}
+        >
+          {/* Close Button */}
+          <button
+            onClick={() => setIsImageFullscreen(false)}
+            aria-label="Close fullscreen image"
+            className="absolute top-6 right-6 z-10 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-200 hover:scale-110"
+            style={{
+              background: 'rgba(255,255,255,0.1)',
+              color: 'white',
+              border: '1px solid rgba(255,255,255,0.2)',
+            }}
+          >
+            <span className="material-symbols-outlined text-xl">close</span>
+          </button>
+          
+          <img
+            src={selectedProject.image}
+            alt={selectedProject.title}
+            className="max-w-full max-h-[90vh] object-contain"
+            style={{
+              animation: 'slideUpModal 0.28s cubic-bezier(0.34, 1.56, 0.64, 1)',
+              borderRadius: 'var(--radius-lg)',
+              boxShadow: '0 20px 60px rgba(0,0,0,0.5)'
+            }}
+            onClick={(e) => e.stopPropagation()}
+          />
         </div>
       )}
 

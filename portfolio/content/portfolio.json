@@ -614,27 +614,28 @@
       "badgeBg": "var(--color-sage)",
       "accentColor": "var(--color-sage)",
       "category": "Full Stack Development · Event Management",
-      "description": "A comprehensive Django-based event management platform enabling seamless event discovery, registration, and management with role-based access control.",
+      "description": "A comprehensive Django-based event management platform enabling seamless event discovery, registration, and management with strict role-based access control for students, organizers, and admins.",
       "longDescription": [
         "IT Connect Smart Event Hub is a full-featured event management system that bridges the gap between event organizers and students. The platform provides a secure, scalable solution for discovering events, registering for participation, and managing event workflows with admin approval processes.",
-        "It features role-based access control for Students, Organizers, and Administrators. Students benefit from smart registration, seat availability tracking, and AI-powered event recommendations based on their interests. Organizers get a dedicated dashboard to create, manage, and analyze event performance.",
-        "To maintain quality, the system includes an Admin Approval System where administrators review and approve/reject pending events before they are publicly listed. The backend is powered by Django 5.2 with comprehensive test coverage."
+        "It features strict role-based access control (RBAC). Students benefit from smart registration with seat availability tracking, dashboards for spend tracking, and personalized event recommendations based on their interests. Organizers get a dedicated dashboard to create events, monitor approval status, and analyze registration metrics.",
+        "To maintain platform quality, the system includes an Admin Approval Pipeline where administrators review, approve, or reject pending events via a visual card-based dashboard before they are publicly listed. The backend is powered by Django 5.2.11 and achieves 100% test coverage with 31 comprehensive unit tests."
       ],
       "highlights": [
-        "Developed a multi-role authentication system for Students, Organizers, and Admins",
+        "Developed a multi-role authentication system with custom profiles for Students, Organizers, and Admins",
         "Implemented smart event registration with real-time seat availability tracking",
-        "Built an AI-powered event recommendation engine based on user interests",
-        "Engineered an administrative approval pipeline for content moderation",
-        "Achieved 100% test coverage with 31 comprehensive unit tests passing",
-        "Designed responsive card-based dashboards using HTML5, CSS3, and JavaScript"
+        "Built a personalized event recommendation engine based on student interests",
+        "Engineered a multi-stage administrative approval pipeline for content moderation",
+        "Designed responsive, role-specific card-based dashboards using HTML5, CSS3, and JavaScript",
+        "Achieved 100% test coverage with 31 comprehensive unit tests passing"
       ],
       "tags": ["Django", "Python", "SQLite", "HTML/CSS", "JavaScript"],
       "tagStyles": ["tag-terracotta", "tag-sage", "tag-rose", "tag-terracotta", "tag-sage"],
       "techDetails": [
-        { "label": "Backend", "value": "Django, Python" },
-        { "label": "Frontend", "value": "HTML5, CSS3, JS" },
+        { "label": "Backend", "value": "Django 5.2, Python 3.9+" },
+        { "label": "Frontend", "value": "HTML5, CSS3, Vanilla JS" },
         { "label": "Database", "value": "SQLite / PostgreSQL" },
-        { "label": "Testing", "value": "Django Test Framework" }
+        { "label": "Architecture", "value": "Role-Based Access Control (RBAC)" },
+        { "label": "Testing", "value": "31 passing unit tests" }
       ],
       "image": "https://drive.google.com/thumbnail?id=1i4-ZXSDZGfOEEnU-51Fch65hGEkmvP22&sz=s1000",
       "link": "https://github.com/Sawan-Mukhiya/IT-connect"
