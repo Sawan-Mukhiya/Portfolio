@@ -40,7 +40,7 @@ export default function About() {
               <img
                 alt="Image of Sawan Mukhiya"
                 className="w-full h-full object-cover hover:scale-105 transition-all duration-700"
-                src="about_me_pic.jpg"
+                src="https://drive.google.com/thumbnail?id=12dIDbAKC5KsPosqFwB2YCN-aopIDkaJU&sz=s1000"
               />
               <div
                 className="absolute inset-0"

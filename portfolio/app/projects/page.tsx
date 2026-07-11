@@ -5,6 +5,7 @@ import { useState, useEffect, useCallback } from 'react';
 import content from '../../content/portfolio.json';
 
 type Project = {
+  order: number;
   title: string;
   description: string;
   longDescription: string[];
@@ -43,7 +44,7 @@ export default function Projects() {
       return !isAIML && !isScraping;
     }
     return true;
-  });
+  }).sort((a, b) => a.order - b.order);
 
   const closeModal = useCallback(() => {
     setSelectedProject(null);

@@ -25,7 +25,7 @@ export default function Resume() {
         </div>
         <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
           <a
-            href="/assets/resume.pdf"
+            href="https://drive.google.com/file/d/1waFNU0zRRZSUDxbbNfhzLXj-5s9n1_mX/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-outline inline-flex items-center gap-2 px-6 py-3 text-sm"
@@ -34,7 +34,7 @@ export default function Resume() {
             View Resume
           </a>
           <a
-            href="/assets/resume.pdf"
+            href="https://drive.google.com/uc?export=download&id=1waFNU0zRRZSUDxbbNfhzLXj-5s9n1_mX"
             download="Sawan_Mukhiya_Resume.pdf"
             className="btn-primary inline-flex items-center gap-2 px-6 py-3 text-sm"
           >

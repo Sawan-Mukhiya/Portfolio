@@ -123,7 +123,7 @@ export default function Home() {
                 style={{ boxShadow: '0 20px 60px rgba(193,68,14,0.2)' }}
               >
                 <img
-                  src="profilePic.jpg"
+                  src="https://drive.google.com/thumbnail?id=1qjH1tYyEMP72wznKru0finO3JDbgeedf&sz=s1000"
                   alt="Image of Sawan Mukhiya"
                   className="w-full h-full object-cover"
                 />
