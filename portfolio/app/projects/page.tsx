@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react';
 
-import content from '../../content/portfolio.json';
+import projectsData from '../../content/projects.json';
 
 type Project = {
   order: number;
@@ -24,12 +24,12 @@ type Project = {
 };
 
 export default function Projects() {
-  const projects: Project[] = content.projects as Project[];
+  const projects: Project[] = projectsData.projects as Project[];
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [filter, setFilter] = useState('All');
   const [isImageFullscreen, setIsImageFullscreen] = useState(false);
 
-  const filters = ['All', 'AI/ML', 'Web Scraping', 'Others'];
+  const filters = ['All', 'AI/ML', 'Web Scraping', 'Mobile', 'Others'];
 
   const filteredProjects = projects.filter(project => {
     if (filter === 'All') return true;
@@ -39,10 +39,14 @@ export default function Projects() {
     if (filter === 'Web Scraping') {
       return project.category.includes('Web Scraping') || project.badge === 'Automation' || project.badge === 'Data Engineering';
     }
+    if (filter === 'Mobile') {
+      return project.badge === 'Mobile App' || project.category.includes('Mobile');
+    }
     if (filter === 'Others') {
       const isAIML = project.badge === 'AI / ML' || project.badge === 'Data Science';
       const isScraping = project.category.includes('Web Scraping') || project.badge === 'Automation' || project.badge === 'Data Engineering';
-      return !isAIML && !isScraping;
+      const isMobile = project.badge === 'Mobile App' || project.category.includes('Mobile');
+      return !isAIML && !isScraping && !isMobile;
     }
     return true;
   }).sort((a, b) => a.order - b.order);

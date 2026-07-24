@@ -138,7 +138,7 @@ export default function Home() {
                 { text: "Web Scraping", color: "sage" },
                 { text: "Python", color: "terracotta" },
                 { text: "AI/ML", color: "sage" },
-                { text: "Node/Express", color: "terracotta" },
+                { text: "Flutter", color: "terracotta" },
                 { text: "SQL", color: "sage" },
                 { text: "Django", color: "terracotta" }
               ].map((badge, i, arr) => {

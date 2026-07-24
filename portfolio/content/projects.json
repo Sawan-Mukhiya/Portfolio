@@ -1,0 +1,816 @@
+{
+    "projects": [
+        {
+            "order": 1,
+            "title": "SnipTxt: OCR Platform",
+            "badge": "AI / ML",
+            "badgeBg": "var(--color-terracotta)",
+            "accentColor": "var(--color-terracotta)",
+            "category": "AI / Machine Learning · Full Stack Web",
+            "description": "A web OCR system built with CNN + BiLSTM + CTC for text recognition. Features modular REST APIs and a Django backend integrated with a MySQL database for storing extracted text.",
+            "longDescription": [
+                "SnipTxt is a full-stack Optical Character Recognition (OCR) platform that accepts an image and outputs recognized text with high accuracy. The system is powered by a custom deep learning model that combines Convolutional Neural Networks (CNN), Bidirectional Long Short-Term Memory (BiLSTM) layers, and a Connectionist Temporal Classification (CTC) decoder — a state-of-the-art architecture for sequence-to-sequence text recognition tasks.",
+                "The backend is built on Django REST Framework, exposing modular APIs that handle image uploads, model inference, and text storage. A React.js frontend provides an intuitive interface for users to upload images and receive extracted text instantly. All recognized text is persisted to a MySQL database, enabling users to maintain a history of their OCR queries.",
+                "The model was trained using supervised learning on labeled text-image datasets, learning to map visual patterns of characters directly to their Unicode representations without requiring explicit character segmentation."
+            ],
+            "highlights": [
+                "Built CNN + BiLSTM + CTC deep learning model for end-to-end text recognition",
+                "Designed modular Django REST APIs for image upload and inference",
+                "Integrated React.js frontend with real-time OCR result display",
+                "Persisted results to MySQL with searchable extraction history",
+                "Implemented backend testing and robust error handling for production stability",
+                "Achieved high character recognition accuracy on diverse text image inputs"
+            ],
+            "tags": [
+                "PyTorch",
+                "Django REST",
+                "React.js",
+                "MySQL"
+            ],
+            "tagStyles": [
+                "tag-terracotta",
+                "tag-terracotta",
+                "tag-sage",
+                "tag-rose"
+            ],
+            "techDetails": [
+                {
+                    "label": "ML Model",
+                    "value": "CNN + BiLSTM + CTC"
+                },
+                {
+                    "label": "Backend",
+                    "value": "Django REST Framework"
+                },
+                {
+                    "label": "Frontend",
+                    "value": "React.js"
+                },
+                {
+                    "label": "Database",
+                    "value": "MySQL"
+                },
+                {
+                    "label": "ML Library",
+                    "value": "PyTorch"
+                },
+                {
+                    "label": "Task",
+                    "value": "Optical Character Recognition"
+                }
+            ],
+            "image": "https://drive.google.com/thumbnail?id=1OLqhHDWQa_YWbrxQoxKrXxdxcAccPRM8&sz=s1000",
+            "link": "https://github.com/Sawan-Mukhiya/SnipTxt-An-OCR-Platform-using-CRNN-with-CTC"
+        },
+        {
+            "order": 2,
+            "title": "Inventory Classification System",
+            "badge": "AI / ML",
+            "badgeBg": "var(--color-sage)",
+            "accentColor": "var(--color-sage)",
+            "category": "Machine Learning · Enterprise Backend",
+            "description": "An enterprise product classification system built for Camden Tools Ltd (a UK-based retailer) to automate the categorization of restricted inventory items using NLP embeddings and XGBoost.",
+            "longDescription": [
+                "The Inventory Classification System is a production-grade machine learning pipeline developed to automate compliance checks for restricted items such as knives, fragile goods, liquids, and electrical plugs.",
+                "The project required extensive end-to-end data handling, including rigorous data cleaning, feature engineering, and a combination of script-based and manual data labeling to build robust training sets.",
+                "The core intelligence relies on 384-dimensional semantic embeddings generated via SentenceTransformers. These are fed into XGBoost and LightGBM classifiers, which were rigorously optimized using Optuna for hyper-parameter tuning. A robust FastAPI microservice orchestrates the inference and exposes endpoints for real-time classification.",
+                "To ensure 100% compliance, the system features a human-in-the-loop workflow. Borderline predictions trigger a review flag, which administrators handle through a dedicated Next.js Admin Dashboard. All classification runs, audit logs, and review actions are securely persisted in a relational MariaDB database, and the entire stack is containerized with Docker."
+            ],
+            "highlights": [
+                "Executed complete data handling pipelines: cleaning, feature engineering, and script-based/manual labeling",
+                "Generated 384-dimensional product embeddings using SentenceTransformers",
+                "Trained and optimized XGBoost and LightGBM classification models using Optuna for hyper-parameter tuning",
+                "Engineered a scalable FastAPI backend with secure endpoints and DB orchestration",
+                "Developed a Next.js Admin Dashboard for human-in-the-loop manual review",
+                "Designed normalized MariaDB schemas for inventory, classification runs, and compliance logs",
+                "Containerized the end-to-end ML and web application stack using Docker"
+            ],
+            "tags": [
+                "FastAPI",
+                "XGBoost",
+                "Optuna",
+                "Next.js",
+                "Docker"
+            ],
+            "tagStyles": [
+                "tag-terracotta",
+                "tag-sage",
+                "tag-rose",
+                "tag-terracotta",
+                "tag-sage"
+            ],
+            "techDetails": [
+                {
+                    "label": "Backend",
+                    "value": "FastAPI, Python"
+                },
+                {
+                    "label": "Frontend",
+                    "value": "Next.js, React"
+                },
+                {
+                    "label": "ML Models",
+                    "value": "XGBoost, LightGBM, SentenceTransformers"
+                },
+                {
+                    "label": "ML Tools",
+                    "value": "Optuna"
+                },
+                {
+                    "label": "Database",
+                    "value": "MariaDB / MySQL"
+                },
+                {
+                    "label": "Deployment",
+                    "value": "Docker"
+                },
+                {
+                    "label": "Domain",
+                    "value": "Enterprise Inventory Compliance"
+                }
+            ],
+            "image": "https://drive.google.com/thumbnail?id=13NIhCRhsp9Q0XwqJ83foX9xXKfqCYnd7&sz=s1000",
+            "linkText": "Private project"
+        },
+        {
+            "order": 3,
+            "title": "CNN using Java from Scratch",
+            "badge": "AI / ML",
+            "badgeBg": "var(--color-sage)",
+            "accentColor": "var(--color-sage)",
+            "category": "Deep Learning · Java",
+            "description": "A Convolutional Neural Network (CNN) built entirely from scratch in Java, implementing forward passes and backpropagation without external ML frameworks.",
+            "longDescription": [
+                "This project is an educational exploration into the core mechanics of deep learning. I built a Convolutional Neural Network (CNN) entirely from scratch using plain Java, without relying on external libraries like TensorFlow or PyTorch.",
+                "The implementation includes manual coding of core neural network layers: Convolutional Layers for feature extraction, Max Pooling Layers for spatial downsampling, and Fully Connected Layers for final classification. It handles forward passes, backward passes (backpropagation), and gradient updates using stochastic gradient descent.",
+                "The network is configured and tested against the classic MNIST dataset to recognize handwritten digits, successfully reading raw pixel data and training its weights iteratively to achieve accurate classifications."
+            ],
+            "highlights": [
+                "Engineered a CNN architecture from scratch in Java without external ML libraries",
+                "Implemented Convolution, Max Pooling, and Fully Connected layers from the ground up",
+                "Developed custom backpropagation logic to manually compute and apply error gradients",
+                "Built data parsers to process the 70,000-image MNIST CSV dataset into 28x28 matrices",
+                "Utilized Object-Oriented patterns (Builder pattern, Polymorphism) to manage network graphs"
+            ],
+            "tags": [
+                "Java",
+                "Deep Learning",
+                "CNN",
+                "Math"
+            ],
+            "tagStyles": [
+                "tag-terracotta",
+                "tag-sage",
+                "tag-rose",
+                "tag-terracotta"
+            ],
+            "techDetails": [
+                {
+                    "label": "Language",
+                    "value": "Java (Pure OOP)"
+                },
+                {
+                    "label": "Domain",
+                    "value": "Computer Vision"
+                },
+                {
+                    "label": "Dataset",
+                    "value": "MNIST (Handwritten Digits)"
+                },
+                {
+                    "label": "Concepts",
+                    "value": "Backpropagation, Gradient Descent"
+                }
+            ],
+            "image": "https://drive.google.com/thumbnail?id=1zNkR8d1oB5lxTZ0QmS3w0btptJzzBzWT&sz=s1000",
+            "link": "https://github.com/Sawan-Mukhiya/Convolutional-Neural-Network-CNN--using-Java"
+        },
+        {
+            "order": 4,
+            "title": "Job Description Scraper",
+            "badge": "Data Engineering",
+            "badgeBg": "var(--color-rose)",
+            "accentColor": "var(--color-rose)",
+            "category": "Web Scraping · Data Extraction",
+            "description": "An automated web scraping pipeline built with Scrapy to extract and structure Data Analyst job postings from reed.co.uk.",
+            "longDescription": [
+                "This project is a dedicated Python web scraper built using the Scrapy framework. It is configured to navigate reed.co.uk and automatically extract high-quality datasets of 'Data Analyst' job postings for market analysis.",
+                "The pipeline is designed to reliably extract key details such as Job Title, Salary, Contract Type, Job Type, and Location. The extracted data is then normalized and exported directly into structured CSV formats for further analysis in spreadsheets or Pandas.",
+                "By utilizing Scrapy's asynchronous crawling capabilities, the scraper efficiently parses multiple pages and handles data pipelines, making it a robust tool for data collection."
+            ],
+            "highlights": [
+                "Engineered an asynchronous web scraper using the Scrapy framework",
+                "Targeted and extracted structured data from reed.co.uk job listings",
+                "Parsed critical job details including Salary, Contract Type, and Location",
+                "Exported normalized datasets into CSV format for data analysis",
+                "Managed project dependencies using isolated Python virtual environments"
+            ],
+            "tags": [
+                "Python",
+                "Scrapy",
+                "Web Scraping",
+                "Data Extraction"
+            ],
+            "tagStyles": [
+                "tag-sage",
+                "tag-rose",
+                "tag-terracotta",
+                "tag-sage"
+            ],
+            "techDetails": [
+                {
+                    "label": "Language",
+                    "value": "Python"
+                },
+                {
+                    "label": "Framework",
+                    "value": "Scrapy"
+                },
+                {
+                    "label": "Output",
+                    "value": "CSV"
+                },
+                {
+                    "label": "Domain",
+                    "value": "Data Collection"
+                }
+            ],
+            "image": "https://drive.google.com/thumbnail?id=1_-tr4UUu0LwihUBKyJ07QPZXeihsUu8l&sz=s1000",
+            "link": "https://github.com/Sawan-Mukhiya/Job_Description_Scraping"
+        },
+        {
+            "order": 5,
+            "title": "NEPSE Stock Journal",
+            "badge": "Full Stack",
+            "badgeBg": "var(--color-sage)",
+            "accentColor": "var(--color-sage)",
+            "category": "Fintech · Full Stack Web",
+            "description": "A stock journal with tax/fee calculations and portfolio analytics for the Nepal Stock Exchange (NEPSE). Backend APIs handle financial reporting and data aggregation for investor insights.",
+            "longDescription": [
+                "The NEPSE Stock Journal is a data-driven web application designed specifically for Nepal Stock Exchange (NEPSE) investors. It allows users to record their stock trades and automatically computes the true cost of each transaction by factoring in all applicable taxes, broker fees, SEBON fees, and DP charges — giving a precise profit/loss figure that manual spreadsheets often miss.",
+                "The application is built with a Django REST Framework backend that handles all business logic for trade journalization, tax calculations, and portfolio analytics. A React.js frontend presents interactive charts and tables, enabling users to visualize their portfolio performance over time, drill into individual stock positions, and generate financial insights.",
+                "All trade data is stored in a MySQL database, with carefully designed schemas to support both individual trade queries and aggregated portfolio reporting. The system also supports saving and retrieving historical trade data, making it a complete investment tracking solution for the Nepali market."
+            ],
+            "highlights": [
+                "Implemented NEPSE-specific tax/fee calculation engine (broker, SEBON, DP charges)",
+                "Built RESTful APIs for trade journalization and portfolio analytics",
+                "Developed interactive chart visualizations for portfolio performance tracking",
+                "Designed MySQL schemas for both granular trade data and aggregated reporting",
+                "Enabled profit/loss analysis across individual stocks and entire portfolio",
+                "Implemented data validation and testing scripts to ensure financial accuracy"
+            ],
+            "tags": [
+                "Django REST",
+                "React.js",
+                "MySQL"
+            ],
+            "tagStyles": [
+                "tag-terracotta",
+                "tag-sage",
+                "tag-rose"
+            ],
+            "techDetails": [
+                {
+                    "label": "Backend",
+                    "value": "Django REST Framework"
+                },
+                {
+                    "label": "Frontend",
+                    "value": "React.js"
+                },
+                {
+                    "label": "Database",
+                    "value": "MySQL"
+                },
+                {
+                    "label": "Domain",
+                    "value": "Nepal Stock Exchange (NEPSE)"
+                },
+                {
+                    "label": "Features",
+                    "value": "Tax Calc, Portfolio Analytics"
+                },
+                {
+                    "label": "Visualization",
+                    "value": "Interactive Charts"
+                }
+            ],
+            "image": "https://drive.google.com/thumbnail?id=1a3wLilpE7KUnOhZM_HFfr0uOCLl_fu7q&sz=s1000",
+            "link": "https://github.com/Sawan-Mukhiya/NEPSE_Stock_journal_and_Taxes"
+        },
+        {
+            "order": 6,
+            "title": "Chess Arena",
+            "badge": "Game Dev",
+            "badgeBg": "var(--color-dusty-rose)",
+            "accentColor": "var(--color-sage)",
+            "category": "Game Development · Desktop App",
+            "description": "An offline chess game built in Java with full undo, save/load, and draw features. MySQL is used to persist game states, moves, and user sessions across play sessions.",
+            "longDescription": [
+                "Chess Arena is a fully functional offline chess game implemented in Java, designed with a clean object-oriented architecture. The game supports all standard chess rules including castling, en passant, and pawn promotion, along with quality-of-life features that make it a complete chess experience.",
+                "The application uses MySQL as a persistent storage layer, enabling players to save their ongoing games and resume them at any time. The game state — including the board position, move history, and player information — is serialized and stored in structured database tables. The move history can be queried to replay games or analyze past decisions.",
+                "Key gameplay features include an undo system that allows players to revert any number of moves, a draw offer mechanism between two players, and the ability to save/load named game sessions. The game is built using Java Swing for the graphical interface, with a clear separation between the game logic (model), UI (view), and controller layers."
+            ],
+            "highlights": [
+                "Implemented full chess rule set: castling, en passant, pawn promotion, check/checkmate",
+                "Built undo system allowing move history traversal",
+                "Designed save/load system with MySQL-backed game state persistence",
+                "Used Java Swing for the interactive graphical chessboard interface",
+                "Stored move history, board states, and user sessions in relational database",
+                "Applied MVC architecture for clean separation of game logic and UI"
+            ],
+            "tags": [
+                "Java",
+                "MySQL"
+            ],
+            "tagStyles": [
+                "tag-sage",
+                "tag-rose"
+            ],
+            "techDetails": [
+                {
+                    "label": "Language",
+                    "value": "Java"
+                },
+                {
+                    "label": "UI Framework",
+                    "value": "Java Swing"
+                },
+                {
+                    "label": "Database",
+                    "value": "MySQL"
+                },
+                {
+                    "label": "Architecture",
+                    "value": "MVC Pattern"
+                },
+                {
+                    "label": "Features",
+                    "value": "Undo, Save/Load, Draw offer"
+                },
+                {
+                    "label": "Rules",
+                    "value": "Full standard chess ruleset"
+                }
+            ],
+            "image": "https://drive.google.com/thumbnail?id=15l5W6A8MDKqvJALC7S1ykx8keTrIkjDH&sz=s1000",
+            "link": "https://github.com/Sawan-Mukhiya/Chess-Arena-An-Offline-Chess-Game"
+        },
+        {
+            "order": 7,
+            "title": "Expense Tracker App",
+            "badge": "Mobile App",
+            "badgeBg": "var(--color-terracotta)",
+            "accentColor": "var(--color-terracotta)",
+            "category": "Mobile Development",
+            "description": "A robust and intuitive Android application designed to help users manage their daily finances locally using Room database and MVVM architecture.",
+            "longDescription": [
+                "The Expense Tracker App is a robust and intuitive Android application designed to help users manage their daily finances locally.",
+                "It features comprehensive expense tracking with CRUD operations, categorized spending, and visual analytics powered by MPAndroidChart. The app ensures privacy by storing all data locally using a secure SQLite database via the Room Persistence Library.",
+                "Built with modern Android development practices, it utilizes MVVM architecture, LiveData, and ViewBinding. The UI is crafted with Material Design 3 components, offering a clean dashboard, category pie charts, and seamless CSV data export functionality."
+            ],
+            "highlights": [
+                "Implemented comprehensive local expense tracking with CRUD operations and categorization",
+                "Visualized spending data using interactive Pie Charts powered by MPAndroidChart",
+                "Engineered a secure, offline-first data layer using SQLite and the Room Persistence Library",
+                "Adopted modern Android MVVM architecture with LiveData and ViewBinding for reactive UI updates",
+                "Developed a CSV export feature utilizing system share intents for easy data portability"
+            ],
+            "tags": [
+                "Java",
+                "Android",
+                "Room DB",
+                "MVVM"
+            ],
+            "tagStyles": [
+                "tag-terracotta",
+                "tag-sage",
+                "tag-rose",
+                "tag-terracotta"
+            ],
+            "techDetails": [
+                {
+                    "label": "Language",
+                    "value": "Java 11"
+                },
+                {
+                    "label": "UI",
+                    "value": "XML, Material Design 3"
+                },
+                {
+                    "label": "Database",
+                    "value": "Room (SQLite)"
+                },
+                {
+                    "label": "Architecture",
+                    "value": "MVVM, LiveData"
+                }
+            ],
+            "image": "https://drive.google.com/thumbnail?id=148949EwiFYLxcBc7zKNVGTacjIhzZ2qD&sz=s1000",
+            "link": "https://github.com/Sawan-Mukhiya/Expense-Tracker"
+        },
+        {
+            "order": 8,
+            "title": "Android Programming",
+            "badge": "Mobile App",
+            "badgeBg": "var(--color-sage)",
+            "accentColor": "var(--color-sage)",
+            "category": "Mobile Development",
+            "description": "A collection of hands-on Android projects demonstrating core concepts like Intents, Fragments, Data Passing, and Activity Lifecycles.",
+            "longDescription": [
+                "This collection of projects serves as a practical, hands-on guide to mastering core Android development concepts. Each module focuses on specific Android framework features, ranging from basic navigation and component activation using Intents, to modular UI design leveraging FragmentManager.",
+                "Key concepts explored include handling explicit and implicit intents, passing complex data safely across activities, and maintaining state preservation during device configuration changes.",
+                "The capstone project acts as a sandbox for combining these fundamental concepts into a more complete application, integrating UI elements and external libraries."
+            ],
+            "highlights": [
+                "Demonstrated app navigation and component activation using Explicit and Implicit Intents",
+                "Implemented modular UI designs utilizing static and dynamic Fragments",
+                "Managed app architecture and state preservation across complex Activity Lifecycles",
+                "Passed complex objects and primitive data efficiently between app screens using Bundles"
+            ],
+            "tags": [
+                "Android",
+                "Java",
+                "XML",
+                "Mobile Dev"
+            ],
+            "tagStyles": [
+                "tag-sage",
+                "tag-terracotta",
+                "tag-rose",
+                "tag-sage"
+            ],
+            "techDetails": [
+                {
+                    "label": "Platform",
+                    "value": "Android"
+                },
+                {
+                    "label": "Concepts",
+                    "value": "Intents, Fragments, Lifecycle"
+                },
+                {
+                    "label": "Environment",
+                    "value": "Android Studio"
+                }
+            ],
+            "image": "https://drive.google.com/thumbnail?id=1qZ_BPGZaQYSckyjwQpWiD057z_S_GOAp&sz=s1000",
+            "link": "https://github.com/Sawan-Mukhiya/Android_Programming"
+        },
+        {
+            "order": 9,
+            "title": "ekantipur Scraping Pipeline",
+            "badge": "Automation",
+            "badgeBg": "#a0524a",
+            "accentColor": "#a0524a",
+            "category": "Web Scraping · Data Pipeline",
+            "description": "Automated scraper using Playwright to extract daily entertainment articles and media. Features robust error handling, automated navigation, and extraction into structured JSON.",
+            "longDescription": [
+                "The ekantipur Scraping Pipeline is a production-grade automated data extraction system built in Python using Playwright for browser automation. The primary target is ekantipur.com, one of Nepal's leading news portals, from which the scraper extracts the top 5 daily entertainment articles and the cartoon of the day.",
+                "The scraper uses the UV package manager for dependency isolation and reproducible environments. Playwright handles headless browser automation, navigating JavaScript-heavy pages that traditional HTTP-based scrapers cannot handle. The system implements robust error handling and validation checks at each extraction step to ensure data accuracy even when the target website's structure changes.",
+                "Extracted data — including article titles, URLs, summaries, images, and publication timestamps — is parsed, normalized, and saved into structured JSON files. The pipeline is designed to be run on a schedule, making it suitable for building datasets, monitoring content, or feeding downstream data applications."
+            ],
+            "highlights": [
+                "Used Playwright for JavaScript-heavy page scraping with headless browser automation",
+                "Extracted top 5 entertainment articles + daily cartoon from ekantipur.com",
+                "Implemented multi-layer error handling and validation for scraping resilience",
+                "Engineered automated navigation logic for dynamic page structures",
+                "Normalized extracted data into structured JSON schemas for downstream use",
+                "Used UV for dependency management and reproducible environments"
+            ],
+            "tags": [
+                "Python",
+                "Playwright",
+                "UV"
+            ],
+            "tagStyles": [
+                "tag-terracotta",
+                "tag-sage",
+                "tag-rose"
+            ],
+            "techDetails": [
+                {
+                    "label": "Language",
+                    "value": "Python"
+                },
+                {
+                    "label": "Browser Automation",
+                    "value": "Playwright"
+                },
+                {
+                    "label": "Package Manager",
+                    "value": "UV"
+                },
+                {
+                    "label": "Target",
+                    "value": "ekantipur.com"
+                },
+                {
+                    "label": "Output Format",
+                    "value": "Structured JSON"
+                },
+                {
+                    "label": "Data",
+                    "value": "Articles, Media, Timestamps"
+                }
+            ],
+            "image": "https://drive.google.com/thumbnail?id=1g9RheYyVwHUK2gEvwPI6JQRmTYe1VHHV&sz=s1000",
+            "link": "https://github.com/Sawan-Mukhiya/Web-Scraping"
+        },
+        {
+            "order": 10,
+            "title": "Productivity Prediction",
+            "badge": "Data Science",
+            "badgeBg": "var(--color-terracotta)",
+            "accentColor": "var(--color-terracotta)",
+            "category": "Data Science · Machine Learning",
+            "description": "Garment employee productivity prediction model. Performed extensive EDA and built regression models using XGBoost, achieving high predictive accuracy (R² ≈ 0.94).",
+            "longDescription": [
+                "This data science project focuses on predicting the productivity of garment factory employees using machine learning regression techniques. The dataset contains features such as team size, targeted productivity, overtime, incentive pay, idle time, and department — all factors that influence worker output in a manufacturing environment.",
+                "The project begins with an extensive Exploratory Data Analysis (EDA) phase, using Pandas, Matplotlib, and Seaborn to visualize productivity patterns, understand feature distributions, identify correlations, and detect outliers. Insights from EDA directly informed the feature engineering decisions.",
+                "Multiple regression models were trained and evaluated using Scikit-learn, including Linear Regression, Random Forest, and Gradient Boosted Trees. The final XGBoost model achieved an R² score of approximately 0.94, meaning the model explains 94% of the variance in employee productivity — a highly accurate result for this domain."
+            ],
+            "highlights": [
+                "Performed comprehensive EDA to understand productivity patterns and feature relationships",
+                "Applied feature engineering based on domain knowledge of garment manufacturing",
+                "Trained and compared multiple regression models: Linear Regression, Random Forest, XGBoost",
+                "Achieved R² ≈ 0.94 with final XGBoost model — explaining 94% of productivity variance",
+                "Used Seaborn and Matplotlib for rich visualization of data distributions and model results",
+                "Delivered a complete end-to-end data science workflow: EDA → preprocessing → modeling → evaluation"
+            ],
+            "tags": [
+                "Pandas",
+                "Scikit-learn",
+                "XGBoost"
+            ],
+            "tagStyles": [
+                "tag-terracotta",
+                "tag-sage",
+                "tag-rose"
+            ],
+            "techDetails": [
+                {
+                    "label": "Language",
+                    "value": "Python"
+                },
+                {
+                    "label": "Data Analysis",
+                    "value": "Pandas, NumPy"
+                },
+                {
+                    "label": "Visualization",
+                    "value": "Matplotlib, Seaborn"
+                },
+                {
+                    "label": "ML Framework",
+                    "value": "Scikit-learn, XGBoost"
+                },
+                {
+                    "label": "Task",
+                    "value": "Regression (Productivity Prediction)"
+                },
+                {
+                    "label": "Best R² Score",
+                    "value": "≈ 0.94 (XGBoost)"
+                }
+            ],
+            "image": "https://drive.google.com/thumbnail?id=1SVFd6L-R2X7HG491DLwOFln_ls8xTmST&sz=s1000",
+            "link": "https://github.com/Sawan-Mukhiya/Garment-Employee-Productivity-Prediction"
+        },
+        {
+            "order": 11,
+            "title": "ExEC: Expression Tool",
+            "badge": "Web App",
+            "badgeBg": "#a0524a",
+            "accentColor": "#a0524a",
+            "category": "Web Application · Algorithms",
+            "description": "A web application for evaluating mathematical expressions and converting between infix, prefix, and postfix notations, featuring user authentication and history tracking.",
+            "longDescription": [
+                "ExEC (Expression Evaluation & Conversion Tool) provides a comprehensive environment for working with mathematical expressions. It allows users to instantly convert expressions between different notation systems and evaluate results with custom variable substitution.",
+                "Built on a robust three-tier architecture, the application integrates a secure authentication layer using bcrypt password hashing. The PHP backend utilizes the Shunting-yard algorithm and stack-based parsing to handle complex conversion and evaluation logic efficiently.",
+                "A responsive frontend designed with HTML, CSS, and JavaScript ensures real-time expression validation before processing. All user interactions, including conversion outputs and evaluation results, are persistently stored in a MySQL database, enabling users to seamlessly track their activity history."
+            ],
+            "highlights": [
+                "Engineered stack-based conversion algorithms for seamless transformation between infix, prefix, and postfix notations",
+                "Implemented the Shunting-yard algorithm for precise parsing and evaluation of complex mathematical expressions",
+                "Developed a secure user authentication system utilizing bcrypt for robust password hashing",
+                "Added real-time frontend expression validation and variable substitution features using JavaScript",
+                "Maintained user activity by persisting conversion and evaluation histories in a normalized MySQL database",
+                "Structured the application using a scalable three-tier architecture separating frontend, API, and database layers"
+            ],
+            "tags": [
+                "PHP",
+                "MySQL",
+                "Algorithms",
+                "Auth"
+            ],
+            "tagStyles": [
+                "tag-terracotta",
+                "tag-sage",
+                "tag-rose",
+                "tag-terracotta"
+            ],
+            "techDetails": [
+                {
+                    "label": "Architecture",
+                    "value": "Three-tier architecture"
+                },
+                {
+                    "label": "Algorithms",
+                    "value": "Shunting-yard, Stack parsing"
+                },
+                {
+                    "label": "Database",
+                    "value": "MySQL (PDO)"
+                },
+                {
+                    "label": "Security",
+                    "value": "bcrypt hashing, Sessions"
+                },
+                {
+                    "label": "Frontend",
+                    "value": "HTML5, CSS3, JS"
+                },
+                {
+                    "label": "Domain",
+                    "value": "Data Structures"
+                }
+            ],
+            "image": "https://drive.google.com/thumbnail?id=1JGcpb4vXQO7BbwfF2l3vqkrBe1lSt2Wt&sz=s1000",
+            "link": "https://github.com/Sawan-Mukhiya/ExEC-Expression_Evaluation_And_Conversion_Tool"
+        },
+        {
+            "order": 12,
+            "title": "Hands On Machine Learning",
+            "badge": "AI / ML",
+            "badgeBg": "var(--color-sage)",
+            "accentColor": "var(--color-sage)",
+            "category": "Machine Learning · Study Project",
+            "description": "Implementation of various machine learning algorithms and concepts using Python and Scikit-learn, emphasizing supervised learning, evaluation metrics, and practical applications.",
+            "longDescription": [
+                "Hands On Machine Learning is a comprehensive study project that systematically implements and explores core machine learning algorithms using Python's scientific stack. Inspired by hands-on learning philosophy, the project serves as both a study companion and a practical reference for ML concepts.",
+                "The project covers a wide spectrum of supervised learning algorithms — including Linear Regression, Logistic Regression, Decision Trees, Random Forests, Support Vector Machines (SVM), K-Nearest Neighbors (KNN), and Neural Network basics. Each algorithm is implemented, trained, and evaluated on relevant datasets with thorough documentation of observations.",
+                "Key concepts explored include model evaluation metrics (accuracy, precision, recall, F1, ROC-AUC), cross-validation strategies, hyperparameter tuning with GridSearchCV, feature scaling and preprocessing pipelines, and overfitting/underfitting diagnostics. All implementations use Scikit-learn with NumPy and Pandas for data handling, and Matplotlib/Seaborn for visualizations."
+            ],
+            "highlights": [
+                "Implemented 7+ supervised learning algorithms from scratch and with Scikit-learn",
+                "Explored model evaluation metrics: accuracy, precision, recall, F1-score, ROC-AUC",
+                "Applied cross-validation and GridSearchCV for robust model selection",
+                "Built feature preprocessing pipelines for handling missing values and scaling",
+                "Investigated ensemble methods: Random Forest, Gradient Boosting, AdaBoost",
+                "Documented observations and findings in Jupyter Notebooks for reproducibility"
+            ],
+            "tags": [
+                "Scikit-learn",
+                "Python",
+                "ML"
+            ],
+            "tagStyles": [
+                "tag-sage",
+                "tag-terracotta",
+                "tag-rose"
+            ],
+            "techDetails": [
+                {
+                    "label": "Language",
+                    "value": "Python"
+                },
+                {
+                    "label": "ML Library",
+                    "value": "Scikit-learn"
+                },
+                {
+                    "label": "Data",
+                    "value": "Pandas, NumPy"
+                },
+                {
+                    "label": "Visualization",
+                    "value": "Matplotlib, Seaborn"
+                },
+                {
+                    "label": "Environment",
+                    "value": "Jupyter Notebook"
+                },
+                {
+                    "label": "Focus",
+                    "value": "Supervised Learning, Model Evaluation"
+                }
+            ],
+            "image": "https://drive.google.com/thumbnail?id=1pu_bUCmQyNxYo--Upzn6KvHUTvxE-pHC&sz=s1000",
+            "link": "https://github.com/Sawan-Mukhiya/Hands-On-Machine-Learning"
+        },
+        {
+            "order": 13,
+            "title": "IT Connect: Smart Event Hub",
+            "badge": "Web App",
+            "badgeBg": "var(--color-sage)",
+            "accentColor": "var(--color-sage)",
+            "category": "Full Stack Development · Event Management",
+            "description": "A comprehensive Django-based event management platform enabling seamless event discovery, registration, and management with strict role-based access control for students, organizers, and admins.",
+            "longDescription": [
+                "IT Connect Smart Event Hub is a full-featured event management system that bridges the gap between event organizers and students. The platform provides a secure, scalable solution for discovering events, registering for participation, and managing event workflows with admin approval processes.",
+                "It features strict role-based access control (RBAC). Students benefit from smart registration with seat availability tracking, dashboards for spend tracking, and personalized event recommendations based on their interests. Organizers get a dedicated dashboard to create events, monitor approval status, and analyze registration metrics.",
+                "To maintain platform quality, the system includes an Admin Approval Pipeline where administrators review, approve, or reject pending events via a visual card-based dashboard before they are publicly listed. The backend is powered by Django 5.2.11 and achieves 100% test coverage with 31 comprehensive unit tests."
+            ],
+            "highlights": [
+                "Developed a multi-role authentication system with custom profiles for Students, Organizers, and Admins",
+                "Implemented smart event registration with real-time seat availability tracking",
+                "Built a personalized event recommendation engine based on student interests",
+                "Engineered a multi-stage administrative approval pipeline for content moderation",
+                "Designed responsive, role-specific card-based dashboards using HTML5, CSS3, and JavaScript",
+                "Achieved 100% test coverage with 31 comprehensive unit tests passing"
+            ],
+            "tags": [
+                "Django",
+                "Python",
+                "SQLite",
+                "HTML/CSS",
+                "JavaScript"
+            ],
+            "tagStyles": [
+                "tag-terracotta",
+                "tag-sage",
+                "tag-rose",
+                "tag-terracotta",
+                "tag-sage"
+            ],
+            "techDetails": [
+                {
+                    "label": "Backend",
+                    "value": "Django 5.2, Python 3.9+"
+                },
+                {
+                    "label": "Frontend",
+                    "value": "HTML5, CSS3, Vanilla JS"
+                },
+                {
+                    "label": "Database",
+                    "value": "SQLite / PostgreSQL"
+                },
+                {
+                    "label": "Architecture",
+                    "value": "Role-Based Access Control (RBAC)"
+                },
+                {
+                    "label": "Testing",
+                    "value": "31 passing unit tests"
+                }
+            ],
+            "image": "https://drive.google.com/thumbnail?id=1i4-ZXSDZGfOEEnU-51Fch65hGEkmvP22&sz=s1000",
+            "link": "https://github.com/Sawan-Mukhiya/IT-connect"
+        },
+        {
+            "order": 14,
+            "title": "ShopEase E-Commerce Platform",
+            "badge": "Web App",
+            "badgeBg": "var(--color-terracotta)",
+            "accentColor": "var(--color-terracotta)",
+            "category": "Full Stack Web · E-Commerce",
+            "description": "A fully functional e-commerce web application featuring product categories, user authentication, a shopping cart, payment integration, and a comprehensive admin panel.",
+            "longDescription": [
+                "ShopEase is a dynamic e-commerce web platform designed to offer a seamless shopping experience for apparel, including distinct categories for men and women, premium products, and summer collections.",
+                "Built on a solid PHP and MySQL backend, the platform securely manages user authentication, dynamic product inventories, wishlist (favorites) tracking, and a comprehensive checkout process incorporating a functional cart and payment interface.",
+                "The frontend is carefully crafted with HTML, vanilla CSS, and JavaScript, featuring interactive product carousels, responsive grids, and an intuitive user interface. An integrated admin panel provides shop managers with the tools to efficiently oversee products, categories, and orders."
+            ],
+            "highlights": [
+                "Developed a robust PHP backend with MySQL database integration for managing users, products, and orders",
+                "Implemented secure user authentication, shopping cart functionality, and payment integration",
+                "Engineered an intuitive admin dashboard for managing the store's inventory and customer data",
+                "Built interactive UI components using vanilla JavaScript, including a dynamic product carousel and responsive layout",
+                "Enabled personalized user features such as a favorites/wishlist system tied to user sessions"
+            ],
+            "tags": [
+                "PHP",
+                "MySQL",
+                "E-Commerce",
+                "JavaScript"
+            ],
+            "tagStyles": [
+                "tag-terracotta",
+                "tag-sage",
+                "tag-rose",
+                "tag-terracotta"
+            ],
+            "techDetails": [
+                {
+                    "label": "Backend",
+                    "value": "PHP"
+                },
+                {
+                    "label": "Frontend",
+                    "value": "HTML5, CSS3, JS"
+                },
+                {
+                    "label": "Database",
+                    "value": "MySQL"
+                },
+                {
+                    "label": "Domain",
+                    "value": "E-Commerce"
+                }
+            ],
+            "image": "https://drive.google.com/thumbnail?id=14_YV6mlZmxauk0gnO4uOCWZ8jPsAkz4R&sz=s1000",
+            "link": "https://github.com/princeSthaa/ecom"
+        }
+    ]
+}
