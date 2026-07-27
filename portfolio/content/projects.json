@@ -358,6 +358,68 @@
         },
         {
             "order": 7,
+            "title": "MoviSense: Movie & TV Show Explorer",
+            "badge": "Mobile App",
+            "badgeBg": "var(--color-sage)",
+            "accentColor": "var(--color-sage)",
+            "category": "Mobile Development · Entertainment",
+            "description": "A mobile-first entertainment browsing app built with Flutter that discovers movies and TV shows from TMDB API with local favorites persistence, detail viewing, cast information, and trailer playback.",
+            "longDescription": [
+                "MoviSense is a Flutter application for discovering movies and TV shows using The Movie Database (TMDB) API. It combines API-driven browsing, search, detail viewing, and local favorites persistence in a polished mobile interface.",
+                "The app loads trending movies, trending TV shows, now-playing films, and provides a comprehensive search experience. Users can inspect details, watch trailers, view cast members, and save favorites locally using Hive for persistent storage.",
+                "Built with flutter_riverpod for state management and Dio for efficient networking, the app features smooth UI entry animations, intelligent loading placeholders with shimmer effects, and a bottom navigation bar for seamless navigation between Home, Search, Favorites, and Profile screens."
+            ],
+            "highlights": [
+                "Loads trending movies, trending TV shows, and now-playing films from TMDB API",
+                "Implements smart search experience with real-time query debouncing and filtering",
+                "Persists user favorites locally using Hive with offline-first architecture",
+                "Built with flutter_riverpod for reactive state management and clean provider architecture",
+                "Features detail pages with overview, ratings, cast lists, and integrated trailer playback",
+                "Implements smooth UI animations using flutter_animate with loading shimmer placeholders"
+            ],
+            "tags": [
+                "Flutter",
+                "Riverpod",
+                "Dio",
+                "Hive"
+            ],
+            "tagStyles": [
+                "tag-sage",
+                "tag-terracotta",
+                "tag-rose",
+                "tag-sage"
+            ],
+            "techDetails": [
+                {
+                    "label": "Framework",
+                    "value": "Flutter"
+                },
+                {
+                    "label": "State Management",
+                    "value": "flutter_riverpod"
+                },
+                {
+                    "label": "Networking",
+                    "value": "Dio"
+                },
+                {
+                    "label": "Persistence",
+                    "value": "Hive"
+                },
+                {
+                    "label": "API",
+                    "value": "TMDB (The Movie Database)"
+                },
+                {
+                    "label": "Features",
+                    "value": "Search, Favorites, Trailers, Cast Info"
+                }
+            ],
+            "image": "https://drive.google.com/thumbnail?id=1aKgjdKN7pcFAQx1wCaKzUxH_WKK0tp5L&sz=s1000",
+            "link": "https://github.com/Sawan-Mukhiya/MoviSense---Movie-TV-Show-Explorer"
+        },
+        {
+            "order": 8,
             "title": "Expense Tracker App",
             "badge": "Mobile App",
             "badgeBg": "var(--color-terracotta)",
@@ -410,7 +472,7 @@
             "link": "https://github.com/Sawan-Mukhiya/Expense-Tracker"
         },
         {
-            "order": 8,
+            "order": 9,
             "title": "Android Programming",
             "badge": "Mobile App",
             "badgeBg": "var(--color-sage)",
@@ -458,7 +520,7 @@
             "link": "https://github.com/Sawan-Mukhiya/Android_Programming"
         },
         {
-            "order": 9,
+            "order": 10,
             "title": "ekantipur Scraping Pipeline",
             "badge": "Automation",
             "badgeBg": "#a0524a",
@@ -518,7 +580,7 @@
             "link": "https://github.com/Sawan-Mukhiya/Web-Scraping"
         },
         {
-            "order": 10,
+            "order": 11,
             "title": "Productivity Prediction",
             "badge": "Data Science",
             "badgeBg": "var(--color-terracotta)",
@@ -578,7 +640,7 @@
             "link": "https://github.com/Sawan-Mukhiya/Garment-Employee-Productivity-Prediction"
         },
         {
-            "order": 11,
+            "order": 12,
             "title": "ExEC: Expression Tool",
             "badge": "Web App",
             "badgeBg": "#a0524a",
@@ -640,7 +702,7 @@
             "link": "https://github.com/Sawan-Mukhiya/ExEC-Expression_Evaluation_And_Conversion_Tool"
         },
         {
-            "order": 12,
+            "order": 13,
             "title": "Hands On Machine Learning",
             "badge": "AI / ML",
             "badgeBg": "var(--color-sage)",
@@ -700,7 +762,7 @@
             "link": "https://github.com/Sawan-Mukhiya/Hands-On-Machine-Learning"
         },
         {
-            "order": 13,
+            "order": 14,
             "title": "IT Connect: Smart Event Hub",
             "badge": "Web App",
             "badgeBg": "var(--color-sage)",
@@ -760,7 +822,7 @@
             "link": "https://github.com/Sawan-Mukhiya/IT-connect"
         },
         {
-            "order": 14,
+            "order": 15,
             "title": "ShopEase E-Commerce Platform",
             "badge": "Web App",
             "badgeBg": "var(--color-terracotta)",
