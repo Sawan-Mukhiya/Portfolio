@@ -34,7 +34,7 @@ export default function Projects() {
   const filteredProjects = projects.filter(project => {
     if (filter === 'All') return true;
     if (filter === 'AI/ML') {
-      return project.badge === 'AI / ML' || project.badge === 'Data Science';
+      return project.badge === 'AI / ML' || project.badge === 'Data Science' || project.badge ==='Gen AI';
     }
     if (filter === 'Web Scraping') {
       return project.category.includes('Web Scraping') || project.badge === 'Automation' || project.badge === 'Data Engineering';
