@@ -43,7 +43,7 @@ export default function Projects() {
       return project.badge === 'Mobile App' || project.category.includes('Mobile');
     }
     if (filter === 'Others') {
-      const isAIML = project.badge === 'AI / ML' || project.badge === 'Data Science';
+      const isAIML = project.badge === 'AI / ML' || project.badge === 'Data Science'|| project.badge ==='Gen AI';
       const isScraping = project.category.includes('Web Scraping') || project.badge === 'Automation' || project.badge === 'Data Engineering';
       const isMobile = project.badge === 'Mobile App' || project.category.includes('Mobile');
       return !isAIML && !isScraping && !isMobile;
